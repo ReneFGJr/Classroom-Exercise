@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateUsuariosTable extends Migration
+class CreateDefinicaoAtividadeTable extends Migration
 {
     public function up(): void
     {
@@ -15,35 +15,29 @@ class CreateUsuariosTable extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'usuario' => [
+            'nome_atividade' => [
                 'type'       => 'VARCHAR',
-                'constraint' => 50,
+                'constraint' => 150,
             ],
-            'idcard' => [
-                'type'       => 'CHAR',
-                'constraint' => 8,
-            ],
-            'senha' => [
-                'type'       => 'VARCHAR',
-                'constraint' => 255,
-            ],
-            'primeiro_acesso' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'default'    => 1,
-            ],
-            'data_primeira_entrada' => [
-                'type' => 'DATETIME',
-                'null' => true,
-            ],
-            'is_admin' => [
+            'resposta_imediata' => [
                 'type'       => 'TINYINT',
                 'constraint' => 1,
                 'default'    => 0,
             ],
-            'nome_completo' => [
-                'type'       => 'VARCHAR',
-                'constraint' => 150,
+            'avaliacao' => [
+                'type'       => 'TINYINT',
+                'constraint' => 1,
+                'default'    => 0,
+            ],
+            'grupo_avaliacao_id' => [
+                'type'       => 'INT',
+                'constraint' => 11,
+                'unsigned'   => true,
+            ],
+            'grupo_questoes_id' => [
+                'type'       => 'INT',
+                'constraint' => 11,
+                'unsigned'   => true,
             ],
             'created_at' => [
                 'type' => 'DATETIME',
@@ -56,16 +50,16 @@ class CreateUsuariosTable extends Migration
         ]);
 
         $this->forge->addKey('id', true);
-        $this->forge->addKey('usuario', false, true);
-        $this->forge->addKey('idcard', false, true);
-        $this->forge->addKey('is_admin');
-        $this->forge->addKey('primeiro_acesso');
+        $this->forge->addKey('grupo_avaliacao_id');
+        $this->forge->addKey('grupo_questoes_id');
+        $this->forge->addForeignKey('grupo_avaliacao_id', 'grupo_avaliacao', 'id', 'CASCADE', 'RESTRICT');
+        $this->forge->addForeignKey('grupo_questoes_id', 'grupo_questoes', 'id', 'CASCADE', 'RESTRICT');
 
-        $this->forge->createTable('usuarios', true);
+        $this->forge->createTable('definicao_atividade', true);
     }
 
     public function down(): void
     {
-        $this->forge->dropTable('usuarios', true);
+        $this->forge->dropTable('definicao_atividade', true);
     }
 }

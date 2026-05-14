@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Classificação Decimal de Dewey" totalQuestoes="50">
+
+    <questao id="1" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?</enunciado>
+        <alternativas>
+            <alternativa id="A">Classificar autores alfabeticamente</alternativa>
+            <alternativa id="B">Organizar o conhecimento em classes numéricas</alternativa>
+            <alternativa id="C">Catalogar periódicos científicos</alternativa>
+            <alternativa id="D">Indexar documentos digitais</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A CDD organiza o conhecimento humano em dez grandes classes numéricas.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A CDD foi criada por Melvil Dewey em 1876.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>Melvil Dewey desenvolveu a classificação em 1876.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual classe principal da CDD corresponde às Ciências Sociais?</enunciado>
+        <alternativas>
+            <alternativa id="A">100</alternativa>
+            <alternativa id="B">200</alternativa>
+            <alternativa id="C">300</alternativa>
+            <alternativa id="D">400</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>A classe 300 corresponde às Ciências Sociais.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual número representa Literatura na CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">700</alternativa>
+            <alternativa id="B">800</alternativa>
+            <alternativa id="C">900</alternativa>
+            <alternativa id="D">500</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A classe 800 representa Literatura.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="dissertativa" dificuldade="media">
+        <enunciado>Explique o princípio decimal utilizado na CDD.</enunciado>
+        <respostaCorreta>A CDD utiliza uma estrutura hierárquica decimal, permitindo subdivisões sucessivas do conhecimento por meio de números.</respostaCorreta>
+        <explicacao>O sistema decimal facilita expansões e detalhamento temático.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A classe 000 da CDD está relacionada a Generalidades e Computação.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A classe 000 inclui obras gerais, informação e computação.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe representa Religião?</enunciado>
+        <alternativas>
+            <alternativa id="A">100</alternativa>
+            <alternativa id="B">200</alternativa>
+            <alternativa id="C">300</alternativa>
+            <alternativa id="D">400</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A classe 200 corresponde à Religião.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="multipla_resposta" dificuldade="media">
+        <enunciado>Quais das opções abaixo representam classes principais da CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">500 - Ciências Naturais</alternativa>
+            <alternativa id="B">700 - Artes</alternativa>
+            <alternativa id="C">1100 - Medicina</alternativa>
+            <alternativa id="D">900 - História e Geografia</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>A CDD possui dez classes principais de 000 a 900.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual número é utilizado para Filosofia e Psicologia?</enunciado>
+        <alternativas>
+            <alternativa id="A">100</alternativa>
+            <alternativa id="B">200</alternativa>
+            <alternativa id="C">500</alternativa>
+            <alternativa id="D">700</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A classe 100 corresponde à Filosofia e Psicologia.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A CDD utiliza apenas letras para organizar assuntos.</enunciado>
+        <respostaCorreta>Falso</respostaCorreta>
+        <explicacao>A CDD utiliza números decimais.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Explique a diferença entre notação pura e notação mista em sistemas de classificação.</enunciado>
+        <respostaCorreta>A notação pura utiliza apenas um tipo de símbolo, como números; a notação mista utiliza números, letras ou outros caracteres.</respostaCorreta>
+        <explicacao>A CDD é um exemplo de notação pura.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual classe da CDD corresponde às Artes?</enunciado>
+        <alternativas>
+            <alternativa id="A">600</alternativa>
+            <alternativa id="B">700</alternativa>
+            <alternativa id="C">800</alternativa>
+            <alternativa id="D">900</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A classe 700 corresponde às Artes e Recreação.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual área é representada pelo número 600?</enunciado>
+        <alternativas>
+            <alternativa id="A">Tecnologia</alternativa>
+            <alternativa id="B">Linguagem</alternativa>
+            <alternativa id="C">História</alternativa>
+            <alternativa id="D">Religião</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A classe 600 corresponde à Tecnologia.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A hierarquia é um elemento fundamental da CDD.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A organização hierárquica permite relacionar assuntos gerais e específicos.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="multipla_resposta" dificuldade="dificil">
+        <enunciado>Quais elementos fazem parte da estrutura da CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">Classes principais</alternativa>
+            <alternativa id="B">Divisões</alternativa>
+            <alternativa id="C">Seções</alternativa>
+            <alternativa id="D">Subdivisões padrão</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>A estrutura inclui classes, divisões, seções e tabelas auxiliares.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual classe representa História e Geografia?</enunciado>
+        <alternativas>
+            <alternativa id="A">700</alternativa>
+            <alternativa id="B">800</alternativa>
+            <alternativa id="C">900</alternativa>
+            <alternativa id="D">600</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>A classe 900 corresponde à História e Geografia.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva a importância das tabelas auxiliares na CDD.</enunciado>
+        <respostaCorreta>As tabelas auxiliares permitem ampliar e especificar assuntos, adicionando aspectos geográficos, linguísticos, cronológicos e formais.</respostaCorreta>
+        <explicacao>Elas aumentam a flexibilidade do sistema.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A CDD é utilizada apenas em bibliotecas dos Estados Unidos.</enunciado>
+        <respostaCorreta>Falso</respostaCorreta>
+        <explicacao>A CDD é utilizada mundialmente.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual número corresponde à Linguagem?</enunciado>
+        <alternativas>
+            <alternativa id="A">200</alternativa>
+            <alternativa id="B">300</alternativa>
+            <alternativa id="C">400</alternativa>
+            <alternativa id="D">500</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>A classe 400 corresponde à Linguagem.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="multipla_escolha" dificuldade="dificil">
+        <enunciado>Em qual classe seria classificado um livro sobre Inteligência Artificial?</enunciado>
+        <alternativas>
+            <alternativa id="A">004</alternativa>
+            <alternativa id="B">150</alternativa>
+            <alternativa id="C">600</alternativa>
+            <alternativa id="D">800</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Inteligência Artificial é classificada em Ciência da Computação.</explicacao>
+    </questao>
+
+    <questao id="21" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A notação da CDD pode crescer indefinidamente com subdivisões.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>O sistema decimal permite expansão contínua.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Explique a relação entre especificidade e síntese na CDD.</enunciado>
+        <respostaCorreta>A especificidade busca representar o assunto mais preciso possível; a síntese permite combinar elementos para representar assuntos complexos.</respostaCorreta>
+        <explicacao>A síntese é importante para documentos multidisciplinares.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="multipla_resposta" dificuldade="media">
+        <enunciado>Quais áreas pertencem às Ciências Naturais?</enunciado>
+        <alternativas>
+            <alternativa id="A">Matemática</alternativa>
+            <alternativa id="B">Astronomia</alternativa>
+            <alternativa id="C">Literatura</alternativa>
+            <alternativa id="D">Física</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>Todas pertencem à classe 500.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Quem administra atualmente a CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">UNESCO</alternativa>
+            <alternativa id="B">Library of Congress</alternativa>
+            <alternativa id="C">OCLC</alternativa>
+            <alternativa id="D">IFLA</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>A OCLC é responsável pela manutenção da CDD.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A CDD divide o conhecimento em dez classes principais.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>As dez classes vão de 000 a 900.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual notação representa Medicina?</enunciado>
+        <alternativas>
+            <alternativa id="A">510</alternativa>
+            <alternativa id="B">610</alternativa>
+            <alternativa id="C">710</alternativa>
+            <alternativa id="D">910</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Medicina está na classe 610.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe representa Matemática?</enunciado>
+        <alternativas>
+            <alternativa id="A">510</alternativa>
+            <alternativa id="B">610</alternativa>
+            <alternativa id="C">710</alternativa>
+            <alternativa id="D">810</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Matemática pertence à classe 510.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva como a hierarquia ajuda na recuperação da informação.</enunciado>
+        <respostaCorreta>A hierarquia relaciona assuntos gerais e específicos, facilitando navegação e recuperação temática.</respostaCorreta>
+        <explicacao>Ela melhora a organização e a busca em bibliotecas.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="verdadeiro_falso" dificuldade="dificil">
+        <enunciado>A CDD é um sistema facetado puro.</enunciado>
+        <respostaCorreta>Falso</respostaCorreta>
+        <explicacao>A CDD é predominantemente enumerativa, embora utilize síntese limitada.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe inclui Biblioteconomia e Ciência da Informação?</enunciado>
+        <alternativas>
+            <alternativa id="A">020</alternativa>
+            <alternativa id="B">120</alternativa>
+            <alternativa id="C">320</alternativa>
+            <alternativa id="D">920</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Biblioteconomia está na classe 020.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="multipla_resposta" dificuldade="dificil">
+        <enunciado>Quais características descrevem corretamente a CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">Hierárquica</alternativa>
+            <alternativa id="B">Decimal</alternativa>
+            <alternativa id="C">Alfabética pura</alternativa>
+            <alternativa id="D">Enumerativa</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>A CDD possui estrutura hierárquica, decimal e enumerativa.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A CDD pode ser utilizada em bibliotecas digitais.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A CDD é utilizada em ambientes físicos e digitais.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe corresponde à Física?</enunciado>
+        <alternativas>
+            <alternativa id="A">510</alternativa>
+            <alternativa id="B">520</alternativa>
+            <alternativa id="C">530</alternativa>
+            <alternativa id="D">540</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Física pertence à classe 530.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Explique o conceito de hospitalidade na CDD.</enunciado>
+        <respostaCorreta>Hospitalidade refere-se à capacidade do sistema de incorporar novos assuntos sem comprometer sua estrutura.</respostaCorreta>
+        <explicacao>A flexibilidade é essencial em sistemas classificatórios.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe representa Direito?</enunciado>
+        <alternativas>
+            <alternativa id="A">320</alternativa>
+            <alternativa id="B">340</alternativa>
+            <alternativa id="C">360</alternativa>
+            <alternativa id="D">380</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Direito está na classe 340.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A CDD é considerada um sistema universal de classificação.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>Ela busca representar todo o conhecimento humano.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe corresponde à Educação?</enunciado>
+        <alternativas>
+            <alternativa id="A">320</alternativa>
+            <alternativa id="B">340</alternativa>
+            <alternativa id="C">370</alternativa>
+            <alternativa id="D">390</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Educação pertence à classe 370.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="multipla_resposta" dificuldade="dificil">
+        <enunciado>Quais são vantagens da CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">Padronização</alternativa>
+            <alternativa id="B">Facilidade de expansão</alternativa>
+            <alternativa id="C">Uso exclusivo em bibliotecas nacionais</alternativa>
+            <alternativa id="D">Organização hierárquica</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>A CDD é padronizada, expansível e hierárquica.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva a importância da notação na recuperação da informação.</enunciado>
+        <respostaCorreta>A notação representa assuntos de forma padronizada, facilitando organização, localização e recuperação de documentos.</respostaCorreta>
+        <explicacao>A notação é essencial para a consistência classificatória.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A CDD utiliza subclasses e subdivisões.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>O sistema possui diferentes níveis hierárquicos.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="multipla_escolha" dificuldade="dificil">
+        <enunciado>Em qual classe seria classificada uma obra sobre Bibliometria?</enunciado>
+        <alternativas>
+            <alternativa id="A">020</alternativa>
+            <alternativa id="B">001</alternativa>
+            <alternativa id="C">410</alternativa>
+            <alternativa id="D">510</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Bibliometria é vinculada à Ciência da Informação.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual classe representa Economia?</enunciado>
+        <alternativas>
+            <alternativa id="A">310</alternativa>
+            <alternativa id="B">320</alternativa>
+            <alternativa id="C">330</alternativa>
+            <alternativa id="D">340</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Economia pertence à classe 330.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A CDD possui tabelas auxiliares para subdivisões geográficas.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>As tabelas permitem representar aspectos geográficos.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Analise as limitações culturais da CDD.</enunciado>
+        <respostaCorreta>A CDD apresenta predominância de perspectivas ocidentais e cristãs, podendo gerar desequilíbrios na representação de outras culturas.</respostaCorreta>
+        <explicacao>Esse é um dos principais debates críticos sobre a CDD.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="multipla_resposta" dificuldade="media">
+        <enunciado>Quais assuntos pertencem à classe 600?</enunciado>
+        <alternativas>
+            <alternativa id="A">Medicina</alternativa>
+            <alternativa id="B">Engenharia</alternativa>
+            <alternativa id="C">Agricultura</alternativa>
+            <alternativa id="D">Literatura</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,C</respostaCorreta>
+        <explicacao>A classe 600 engloba áreas tecnológicas e aplicadas.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual símbolo é usado para separação decimal na CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">Vírgula</alternativa>
+            <alternativa id="B">Ponto</alternativa>
+            <alternativa id="C">Barra</alternativa>
+            <alternativa id="D">Hífen</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A CDD utiliza ponto decimal.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A ordem das classes na CDD é arbitrária e sem lógica temática.</enunciado>
+        <respostaCorreta>Falso</respostaCorreta>
+        <explicacao>Existe uma lógica histórica e temática na sequência das classes.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="dissertativa" dificuldade="media">
+        <enunciado>Explique o conceito de classe principal na CDD.</enunciado>
+        <respostaCorreta>Classe principal é um dos dez grandes agrupamentos do conhecimento representados pelas centenas.</respostaCorreta>
+        <explicacao>As classes principais estruturam todo o sistema.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="multipla_escolha" dificuldade="dificil">
+        <enunciado>Qual notação seria mais adequada para um livro sobre História do Brasil?</enunciado>
+        <alternativas>
+            <alternativa id="A">981</alternativa>
+            <alternativa id="B">869</alternativa>
+            <alternativa id="C">330</alternativa>
+            <alternativa id="D">510</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>981 corresponde à História do Brasil.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="multipla_resposta" dificuldade="dificil">
+        <enunciado>Quais conceitos estão relacionados à organização do conhecimento na CDD?</enunciado>
+        <alternativas>
+            <alternativa id="A">Hierarquia</alternativa>
+            <alternativa id="B">Notação</alternativa>
+            <alternativa id="C">Indexação</alternativa>
+            <alternativa id="D">Classificação</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,C,D</respostaCorreta>
+        <explicacao>Todos esses conceitos são fundamentais na organização do conhecimento.</explicacao>
+    </questao>
+
+</quiz>

@@ -1,0 +1,342 @@
+ERROR - 2026-05-11 09:58:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\Projetos\www\Classroom Exercise\v1\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Projetos\www\Classroom Exercise\v1\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\Projetos\www\Classroom Exercise\v1\system\Database\MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\Projetos\www\Classroom Exercise\v1\system\Database\MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\Projetos\www\Classroom Exercise\v1\system\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Projetos\www\Classroom Exercise\v1\system\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#9 C:\Projetos\www\Classroom Exercise\v1\system\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#10 C:\Projetos\www\Classroom Exercise\v1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#11 C:\Projetos\www\Classroom Exercise\v1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#12 C:\Projetos\www\Classroom Exercise\v1\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#13 C:\Projetos\www\Classroom Exercise\v1\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#14 C:\Projetos\www\Classroom Exercise\v1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\Projetos\www\Classroom Exercise\v1\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(1706): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\Projetos\www\Classroom Exercise\v1\system\Database\BaseConnection.php(1726): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\Projetos\www\Classroom Exercise\v1\system\Database\MigrationRunner.php(821): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\Projetos\www\Classroom Exercise\v1\system\Database\MigrationRunner.php(173): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\Projetos\www\Classroom Exercise\v1\system\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\Projetos\www\Classroom Exercise\v1\system\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+#8 C:\Projetos\www\Classroom Exercise\v1\system\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+#9 C:\Projetos\www\Classroom Exercise\v1\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run(Array)
+#10 C:\Projetos\www\Classroom Exercise\v1\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', Array)
+#11 C:\Projetos\www\Classroom Exercise\v1\system\Boot.php(442): CodeIgniter\CLI\Console->run()
+#12 C:\Projetos\www\Classroom Exercise\v1\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#13 C:\Projetos\www\Classroom Exercise\v1\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#14 {main}
+ERROR - 2026-05-11 09:59:00 --> Incorrect table definition; there can be only one auto column and it must be defined as a key
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `usuarios` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`usuario` VARCHAR(50) NOT NULL,
+	`idcard` CHAR(8) NOT NULL,
+	`senha` VARCHAR(255) NOT NULL,
+	`primeiro_acesso` TINYINT(1) NOT NULL DEFAULT 1,
+	`data_primeira_entrada` DATETIME NULL,
+	`is_admin` TINYINT(1) NOT NULL DEFAULT 0,
+	`nome_completo` VARCHAR(150) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_usuarios` PRIMARY KEY(`idcard`),
+	UNIQUE KEY `usuario` (`usuario`),
+	KEY `is_admin` (`is_admin`),
+	KEY `primeiro_acesso` (`primeiro_acesso`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `usuarios` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`usuario` VARCHAR(50) NOT NULL,
+	`idcard` CHAR(8) NOT NULL,
+	`senha` VARCHAR(255) NOT NULL,
+	`primeiro_acesso` TINYINT(1) NOT NULL DEFAULT 1,
+	`data_primeira_entrada` DATETIME NULL,
+	`is_admin` TINYINT(1) NOT NULL DEFAULT 0,
+	`nome_completo` VARCHAR(150) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_usuarios` PRIMARY KEY(`idcard`),
+	UNIQUE KEY `usuario` (`usuario`),
+	KEY `is_admin` (`is_admin`),
+	KEY `primeiro_acesso` (`primeiro_acesso`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `usuarios` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`usuario` VARCHAR(50) NOT NULL,
+	`idcard` CHAR(8) NOT NULL,
+	`senha` VARCHAR(255) NOT NULL,
+	`primeiro_acesso` TINYINT(1) NOT NULL DEFAULT 1,
+	`data_primeira_entrada` DATETIME NULL,
+	`is_admin` TINYINT(1) NOT NULL DEFAULT 0,
+	`nome_completo` VARCHAR(150) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_usuarios` PRIMARY KEY(`idcard`),
+	UNIQUE KEY `usuario` (`usuario`),
+	KEY `is_admin` (`is_admin`),
+	KEY `primeiro_acesso` (`primeiro_acesso`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `usuarios` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`usuario` VARCHAR(50) NOT NULL,
+	`idcard` CHAR(8) NOT NULL,
+	`senha` VARCHAR(255) NOT NULL,
+	`primeiro_acesso` TINYINT(1) NOT NULL DEFAULT 1,
+	`data_primeira_entrada` DATETIME NULL,
+	`is_admin` TINYINT(1) NOT NULL DEFAULT 0,
+	`nome_completo` VARCHAR(150) NOT NULL,
+	`created_at` DATETIME NULL,
+	`updated_at` DATETIME NULL,
+	CONSTRAINT `pk_usuarios` PRIMARY KEY(`idcard`),
+	UNIQUE KEY `usuario` (`usuario`),
+	KEY `is_admin` (`is_admin`),
+	KEY `primeiro_acesso` (`primeiro_acesso`)
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-05-11-000001_CreateUsuariosTable.php(64): CodeIgniter\Database\Forge->createTable('usuarios', true)
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateUsuariosTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-05-11 20:34:13 --> Table 'xercise.grupo_avaliacao' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `grupo_avaliacao`
+WHERE `nome_disciplina` = \'Classificação Decimal de Dewey\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `grupo_avaliacao`
+WHERE `nome_disciplina` = \'Classificação Decimal de Dewey\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `grupo_avaliacao`
+WHERE `nome_disciplina` = \'Classificação Decimal de Dewey\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `grupo_avaliacao`
+WHERE `nome_disciplina` = :nome_disciplina:', [...], false)
+ 5 APPPATH\Controllers\Admin.php(229): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(65): App\Controllers\Admin->upsertGrupoAvaliacao(Object(CodeIgniter\Database\MySQLi\Connection), 'Classificação Decimal de Dewey')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->importarCddXml()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-11 20:35:58 --> Table 'xercise.questions' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = \'Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = \'Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = \'Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = :enunciado_questao:', [...], false)
+ 5 APPPATH\Controllers\Admin.php(285): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(110): App\Controllers\Admin->upsertQuestion(Object(CodeIgniter\Database\MySQLi\Connection), [...])
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->importarCddXml()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2026-05-11 20:36:03 --> Table 'xercise.questions' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = \'Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(910): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = \'Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(827): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = \'Qual é o principal objetivo da Classificação Decimal de Dewey (CDD)?\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `questions`
+WHERE `enunciado_questao` = :enunciado_questao:', [...], false)
+ 5 APPPATH\Controllers\Admin.php(285): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(110): App\Controllers\Admin->upsertQuestion(Object(CodeIgniter\Database\MySQLi\Connection), [...])
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->importarCddXml()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-11 20:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 20:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 20:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 20:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 20:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 20:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:07:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:12:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:13:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:13:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:17:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-05-11 21:21:12 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:15 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:15 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:15 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:20 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:22 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:23 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:32 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2026-05-11 21:21:33 --> ErrorException: Undefined property: App\Controllers\Admin::$db
+[Method: GET, Route: admin/avaliations]
+in APPPATH\Controllers\Admin.php on line 655.
+ 1 APPPATH\Controllers\Admin.php(655): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$db', 'C:\\Projetos\\www\\Classroom Exercise\\v1\\app\\Controllers\\Admin.php', 655)
+ 2 APPPATH\Controllers\Admin.php(31): App\Controllers\Admin->campoExiste('grupo_avaliacao', 'data_inicio_avaliacao')
+ 3 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Admin->index()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2026-05-11 21:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:21:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:23:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:26:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-05-11 21:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
