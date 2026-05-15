@@ -25,6 +25,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a class="dropdown-item" href="/admin/avaliations">Gerenciar avaliacoes</a></li>
+                        <li><a class="dropdown-item" href="/admin/usuarios">Usuarios cadastrados</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/admin/importar-cdd-xml">Importar XML</a></li>
                         <li><a class="dropdown-item" href="/admin/inport/users">Import Users</a></li>

@@ -47,6 +47,40 @@ class Admin extends BaseController
         ]);
     }
 
+    public function usuariosCadastrados(): string|ResponseInterface
+    {
+        $db = db_connect();
+
+        if (! $db->tableExists('usuarios')) {
+            return redirect()->to('/admin/avaliations')->with('erro', 'Tabela de usuarios nao encontrada. Execute as migrations pendentes.');
+        }
+
+        $selectCampos = [
+            'id',
+            'usuario',
+            'idcard',
+            'nome_completo',
+            'primeiro_acesso',
+            'is_admin',
+            'created_at',
+        ];
+
+        if ($this->campoExiste('usuarios', 'email')) {
+            $selectCampos[] = 'email';
+        }
+
+        $usuarios = $db->table('usuarios')
+            ->select(implode(', ', $selectCampos))
+            ->orderBy('nome_completo', 'ASC')
+            ->get()
+            ->getResultArray();
+
+        return view('admin/usuarios', [
+            'title' => 'Usuarios cadastrados',
+            'usuarios' => $usuarios,
+        ]);
+    }
+
     public function novaAvaliacao(): string|ResponseInterface
     {
         $db = db_connect();
@@ -505,6 +539,7 @@ class Admin extends BaseController
                     $db,
                     $nomeAtividade,
                     array_values(array_unique($idsQuestoes)),
+                    $grupoAvaliacaoId,
                 );
             } else {
                 $avisos[] = 'Tabela grupo_questoes nao encontrada. Grupo de questoes nao foi gravado.';
@@ -778,7 +813,7 @@ class Admin extends BaseController
     /**
      * @param list<int> $idsQuestoes
      */
-    private function upsertGrupoQuestoes(object $db, string $nomeGrupo, array $idsQuestoes): int
+    private function upsertGrupoQuestoes(object $db, string $nomeGrupo, array $idsQuestoes, ?int $grupoAvaliacaoId = null): int
     {
         $grupoQuestoesTable = $db->table('grupo_questoes');
         $grupoQuestoes = $grupoQuestoesTable->where('nome_grupo', $nomeGrupo)->get()->getRowArray();
@@ -787,6 +822,10 @@ class Admin extends BaseController
             'questoes_json' => json_encode($idsQuestoes, JSON_UNESCAPED_UNICODE),
             'updated_at' => date('Y-m-d H:i:s'),
         ];
+
+        if ($grupoAvaliacaoId !== null && $this->campoExiste('grupo_questoes', 'grupo_avaliacao_id')) {
+            $payload['grupo_avaliacao_id'] = $grupoAvaliacaoId;
+        }
 
         if ($grupoQuestoes !== null) {
             $grupoQuestoesTable->where('id', (int) $grupoQuestoes['id'])->update($payload);
