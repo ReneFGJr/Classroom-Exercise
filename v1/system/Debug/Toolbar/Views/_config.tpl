@@ -1,5 +1,5 @@
 <p class="debug-bar-alignRight">
-    <a href="<?=base_url();?>/https://codeigniter.com/user_guide/" target="_blank" >Read the CodeIgniter docs...</a>
+    <a href="https://codeigniter.com/user_guide/" target="_blank" >Read the CodeIgniter docs...</a>
 </p>
 
 <table>
