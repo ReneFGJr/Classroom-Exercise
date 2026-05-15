@@ -14,7 +14,7 @@
                     <div class="alert alert-danger"><?= esc((string) session('erro')) ?></div>
                 <?php endif; ?>
 
-                <form method="post" action="/login/primeiro-acesso">
+                <form method="post" action="<?= base_url(); ?>/login/primeiro-acesso">
                     <div class="mb-3">
                         <label for="email" class="form-label">E-mail</label>
                         <input

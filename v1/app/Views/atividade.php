@@ -26,7 +26,7 @@ $erro = session('erro');
             <h1 class="h3 mb-1">Grupo de Avaliacao</h1>
             <p class="text-secondary mb-0">Disciplina: <strong><?= esc($disciplina) ?></strong></p>
         </div>
-        <a href="<?=base_url();?>//" class="btn btn-outline-primary">Voltar</a>
+        <a href="<?=base_url();?>/" class="btn btn-outline-primary">Voltar</a>
     </div>
 
     <div class="card border-0 shadow-sm">

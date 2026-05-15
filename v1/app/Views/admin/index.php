@@ -8,13 +8,13 @@
             <p class="text-secondary mb-0">Acompanhamento das avaliacoes cadastradas no sistema.</p>
         </div>
         <div class="d-flex gap-2">
-            <a href="<?=base_url();?>//admin/avaliations/new" class="btn btn-success btn-sm" title="Nova avaliacao" aria-label="Nova avaliacao">
+            <a href="<?=base_url();?>/admin/avaliations/new" class="btn btn-success btn-sm" title="Nova avaliacao" aria-label="Nova avaliacao">
                 <i class="bi bi-plus-lg"></i>
             </a>
-            <a href="<?=base_url();?>//admin/importar-xml" class="btn btn-outline-primary btn-sm" title="Importar XML" aria-label="Importar XML">
+            <a href="<?=base_url();?>/admin/importar-xml" class="btn btn-outline-primary btn-sm" title="Importar XML" aria-label="Importar XML">
                 <i class="bi bi-filetype-xml"></i>
             </a>
-            <a href="<?=base_url();?>//admin/inport/users" class="btn btn-primary btn-sm" title="Importar usuarios" aria-label="Importar usuarios">
+            <a href="<?=base_url();?>/admin/inport/users" class="btn btn-primary btn-sm" title="Importar usuarios" aria-label="Importar usuarios">
                 <i class="bi bi-people-fill"></i>
             </a>
         </div>

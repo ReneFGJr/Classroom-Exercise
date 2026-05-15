@@ -7,7 +7,7 @@
             <h1 class="h3 mb-1">Importacao de Arquivos XML</h1>
             <p class="text-secondary mb-0">Revise os arquivos encontrados e confirme a importacao.</p>
         </div>
-        <a href="<?=base_url();?>//admin" class="btn btn-outline-secondary btn-sm">
+        <a href="<?= base_url(); ?>/admin" class="btn btn-outline-secondary btn-sm">
             <i class="bi bi-arrow-left"></i> Voltar
         </a>
     </div>
@@ -99,8 +99,8 @@
 <?php endif; ?>
 
 <div class="d-flex justify-content-end gap-2">
-    <a href="<?=base_url();?>//admin" class="btn btn-light border">Cancelar</a>
-    <form method="post" action="/admin/importar-xml/confirmar" class="m-0">
+    <a href="<?= base_url(); ?>/admin" class="btn btn-light border">Cancelar</a>
+    <form method="post" action="<?= base_url(); ?>/admin/importar-xml/confirmar" class="m-0">
         <?= csrf_field() ?>
         <button type="submit" class="btn btn-primary" <?= empty($arquivos) ? 'disabled' : '' ?>>
             <i class="bi bi-database-fill-up me-1"></i>

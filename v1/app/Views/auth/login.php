@@ -19,7 +19,7 @@
                     <div class="alert alert-success"><?= esc((string) session('sucesso')) ?></div>
                 <?php endif; ?>
 
-                <form method="post" action="/login">
+                <form method="post" action="<?= base_url(); ?>/login">
                     <div class="mb-3">
                         <label for="idcard" class="form-label">ID do cracha</label>
                         <input
@@ -31,8 +31,7 @@
                             minlength="8"
                             pattern="\d{8}"
                             value="<?= esc((string) old('idcard', '')) ?>"
-                            required
-                        >
+                            required>
                     </div>
 
                     <div class="mb-4">
@@ -42,8 +41,7 @@
                             class="form-control"
                             id="senha"
                             name="senha"
-                            placeholder="Obrigatoria apos o primeiro acesso"
-                        >
+                            placeholder="Obrigatoria apos o primeiro acesso">
                     </div>
 
                     <button type="submit" class="btn btn-primary w-100">Entrar</button>
