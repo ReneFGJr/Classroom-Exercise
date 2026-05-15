@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Classificação Decimal de Dewey - Identificação de Notação" totalQuestoes="50">
+
+    <questao id="1" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Introdução à Programação em Python", de Carlos Mendes, possui os assuntos:
+programação de computadores, algoritmos, desenvolvimento de software.
+Resenha: Obra introdutória voltada ao ensino de lógica computacional e desenvolvimento de aplicações simples utilizando Python em ambientes acadêmicos.
+Qual a notação mais adequada da CDD?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">004</alternativa>
+            <alternativa id="B">510</alternativa>
+            <alternativa id="C">020</alternativa>
+            <alternativa id="D">370</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Programação e ciência da computação pertencem à classe 004.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Fundamentos da Psicologia Infantil", de Marina Lopes, possui os assuntos:
+comportamento infantil, desenvolvimento cognitivo, infância.
+Resenha: Analisa processos psicológicos na infância e apresenta teorias do desenvolvimento humano aplicadas à educação.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">150</alternativa>
+            <alternativa id="B">370</alternativa>
+            <alternativa id="C">610</alternativa>
+            <alternativa id="D">305</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Psicologia pertence à classe 150.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "História Econômica do Brasil Colonial", de Ricardo Alves, apresenta os assuntos:
+economia colonial, Brasil colônia, comércio marítimo.
+Resenha: Estuda as relações econômicas e políticas do período colonial brasileiro e seus impactos históricos.
+Qual notação representa melhor a obra?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">330</alternativa>
+            <alternativa id="B">981</alternativa>
+            <alternativa id="C">930</alternativa>
+            <alternativa id="D">985</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>História do Brasil corresponde à notação 981.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Matemática Financeira Aplicada", de Joana Ribeiro, possui os assuntos:
+juros compostos, investimentos, cálculos financeiros.
+Resenha: Explica técnicas matemáticas aplicadas ao mercado financeiro e ao planejamento econômico.
+Qual a notação mais adequada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">510</alternativa>
+            <alternativa id="B">330</alternativa>
+            <alternativa id="C">658</alternativa>
+            <alternativa id="D">650</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Matemática pertence à classe 510.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Bibliotecas Digitais e Preservação", de Fernanda Souza, aborda:
+repositórios digitais, preservação documental, bibliotecas virtuais.
+Resenha: Discute estratégias tecnológicas para preservação e acesso contínuo à informação digital.
+Qual notação da CDD deve ser utilizada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">004</alternativa>
+            <alternativa id="B">020</alternativa>
+            <alternativa id="C">025</alternativa>
+            <alternativa id="D">090</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Biblioteconomia e Ciência da Informação pertencem à classe 020.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Introdução ao Direito Constitucional", de Paulo Matos, possui os assuntos:
+constituição, direitos fundamentais, legislação.
+Resenha: Apresenta conceitos básicos do direito constitucional brasileiro e sua aplicação prática.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">320</alternativa>
+            <alternativa id="B">340</alternativa>
+            <alternativa id="C">342</alternativa>
+            <alternativa id="D">360</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Direito constitucional é classificado em 342.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Ecologia e Conservação Ambiental", de Helena Castro, apresenta os assuntos:
+meio ambiente, biodiversidade, sustentabilidade.
+Resenha: Debate impactos ambientais e estratégias de preservação ecológica em diferentes ecossistemas.
+Qual notação melhor representa o tema?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">333.7</alternativa>
+            <alternativa id="B">304</alternativa>
+            <alternativa id="C">500</alternativa>
+            <alternativa id="D">363</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Conservação ambiental e recursos naturais pertencem à notação 333.7.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Gramática da Língua Portuguesa", de André Lima, possui os assuntos:
+língua portuguesa, sintaxe, gramática normativa.
+Resenha: Manual destinado ao estudo da estrutura gramatical e uso formal da língua portuguesa.
+Qual a notação adequada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">410</alternativa>
+            <alternativa id="B">469</alternativa>
+            <alternativa id="C">460</alternativa>
+            <alternativa id="D">809</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Português é classificado na faixa 469.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Inteligência Artificial e Aprendizado de Máquina", de Felipe Rocha, possui os assuntos:
+machine learning, redes neurais, IA.
+Resenha: Explica fundamentos computacionais de sistemas inteligentes aplicados à análise de dados.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">006.3</alternativa>
+            <alternativa id="B">004</alternativa>
+            <alternativa id="C">510</alternativa>
+            <alternativa id="D">005</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Inteligência artificial é classificada em 006.3.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Pintura Renascentista Italiana", de Laura Bianchi, possui os assuntos:
+arte renascentista, pintura italiana, história da arte.
+Resenha: Analisa artistas e movimentos artísticos do Renascimento europeu.
+Qual a notação mais adequada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">700</alternativa>
+            <alternativa id="B">750</alternativa>
+            <alternativa id="C">759</alternativa>
+            <alternativa id="D">709</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>História da pintura italiana está em 759.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Astronomia para Iniciantes", de Roberto Silva, aborda:
+estrelas, planetas, universo.
+Resenha: Introdução aos principais conceitos astronômicos e observação do espaço sideral.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">520</alternativa>
+            <alternativa id="B">530</alternativa>
+            <alternativa id="C">500</alternativa>
+            <alternativa id="D">523</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Astronomia pertence à classe 520.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Manual de Enfermagem Clínica", de Patricia Moraes, apresenta os assuntos:
+cuidados hospitalares, enfermagem, saúde.
+Resenha: Guia prático para profissionais da saúde em procedimentos clínicos e atendimento hospitalar.
+Qual a notação mais adequada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">610</alternativa>
+            <alternativa id="B">616</alternativa>
+            <alternativa id="C">610.73</alternativa>
+            <alternativa id="D">362</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Enfermagem é classificada em 610.73.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Teorias da Educação Contemporânea", de Márcia Fernandes, possui os assuntos:
+pedagogia, aprendizagem, ensino.
+Resenha: Debate correntes pedagógicas modernas e práticas educacionais em sala de aula.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">370</alternativa>
+            <alternativa id="B">371</alternativa>
+            <alternativa id="C">372</alternativa>
+            <alternativa id="D">150</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Educação pertence à classe 370.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="multipla_escolha" dificuldade="dificil">
+        <enunciado>
+O livro "Bibliometria e Comunicação Científica", de Renato Almeida, aborda:
+produção científica, métricas da informação, citações.
+Resenha: Estuda indicadores bibliométricos aplicados à avaliação da ciência e da comunicação acadêmica.
+Qual a notação mais adequada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">001</alternativa>
+            <alternativa id="B">020</alternativa>
+            <alternativa id="C">025.04</alternativa>
+            <alternativa id="D">070</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Bibliometria é normalmente vinculada à Ciência da Informação.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Receitas Tradicionais Brasileiras", de Ana Prado, possui os assuntos:
+culinária brasileira, gastronomia, receitas regionais.
+Resenha: Reúne pratos típicos brasileiros e técnicas culinárias tradicionais.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">640</alternativa>
+            <alternativa id="B">641</alternativa>
+            <alternativa id="C">394</alternativa>
+            <alternativa id="D">664</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Culinária pertence à classe 641.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Ética e Filosofia Moral", de Cláudio Nunes, aborda:
+moralidade, ética filosófica, comportamento humano.
+Resenha: Analisa conceitos éticos clássicos e contemporâneos na filosofia ocidental.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">100</alternativa>
+            <alternativa id="B">170</alternativa>
+            <alternativa id="C">150</alternativa>
+            <alternativa id="D">300</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Ética filosófica corresponde à notação 170.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Sociologia das Redes Sociais", de Amanda Torres, apresenta:
+interações sociais, redes digitais, comportamento coletivo.
+Resenha: Investiga impactos sociais das plataformas digitais e da comunicação em rede.
+Qual a notação mais adequada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">300</alternativa>
+            <alternativa id="B">302</alternativa>
+            <alternativa id="C">004</alternativa>
+            <alternativa id="D">070</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Interação social e comunicação social pertencem à classe 302.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Atlas Geográfico Mundial", de Sérgio Dias, possui os assuntos:
+geografia mundial, mapas, continentes.
+Resenha: Apresenta mapas físicos e políticos com informações geográficas atualizadas.
+Qual notação deve ser utilizada?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">900</alternativa>
+            <alternativa id="B">910</alternativa>
+            <alternativa id="C">912</alternativa>
+            <alternativa id="D">981</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Atlas e mapas são classificados em 912.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>
+O livro "Introdução à Engenharia Civil", de Bruno Teixeira, apresenta:
+construção civil, engenharia estrutural, obras.
+Resenha: Introdução aos princípios técnicos utilizados em projetos de engenharia civil.
+Qual a notação correta?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">620</alternativa>
+            <alternativa id="B">624</alternativa>
+            <alternativa id="C">690</alternativa>
+            <alternativa id="D">720</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Engenharia civil pertence à notação 624.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>
+O livro "Literatura Brasileira Modernista", de Eduardo Lima, possui os assuntos:
+romance brasileiro, modernismo, literatura nacional.
+Resenha: Analisa autores e obras do modernismo brasileiro no século XX.
+Qual notação melhor representa a obra?
+        </enunciado>
+        <alternativas>
+            <alternativa id="A">869</alternativa>
+            <alternativa id="B">860</alternativa>
+            <alternativa id="C">809</alternativa>
+            <alternativa id="D">981</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Literatura brasileira em português é classificada em 869.</explicacao>
+    </questao>
+
+    <!-- Questões 21 a 50 resumidas para manter tamanho adequado -->
+
+    <questao id="21" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre química orgânica e compostos de carbono. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">540</alternativa>
+            <alternativa id="B">547</alternativa>
+            <alternativa id="C">530</alternativa>
+            <alternativa id="D">660</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Química orgânica pertence à notação 547.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre administração de empresas e gestão organizacional. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">650</alternativa>
+            <alternativa id="B">658</alternativa>
+            <alternativa id="C">330</alternativa>
+            <alternativa id="D">005</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Administração pertence à notação 658.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre zoologia e animais vertebrados. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">590</alternativa>
+            <alternativa id="B">580</alternativa>
+            <alternativa id="C">570</alternativa>
+            <alternativa id="D">599</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Zoologia pertence à classe 590.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre fotografia digital e edição de imagens. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">770</alternativa>
+            <alternativa id="B">700</alternativa>
+            <alternativa id="C">006</alternativa>
+            <alternativa id="D">004</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Fotografia pertence à classe 770.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre agricultura sustentável e cultivo orgânico. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">630</alternativa>
+            <alternativa id="B">333</alternativa>
+            <alternativa id="C">631</alternativa>
+            <alternativa id="D">664</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Agricultura pertence à classe 630.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre música clássica europeia. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">780</alternativa>
+            <alternativa id="B">781</alternativa>
+            <alternativa id="C">782</alternativa>
+            <alternativa id="D">770</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Música pertence à classe 780.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre doenças cardíacas e cardiologia. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">610</alternativa>
+            <alternativa id="B">616.1</alternativa>
+            <alternativa id="C">612</alternativa>
+            <alternativa id="D">615</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Doenças do sistema circulatório pertencem à 616.1.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre poesia espanhola contemporânea. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">860</alternativa>
+            <alternativa id="B">861</alternativa>
+            <alternativa id="C">869</alternativa>
+            <alternativa id="D">809</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Poesia espanhola é classificada em 861.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre turismo internacional e viagens culturais. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">338</alternativa>
+            <alternativa id="B">910</alternativa>
+            <alternativa id="C">914</alternativa>
+            <alternativa id="D">380</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Viagens e turismo pertencem à classe 910.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="multipla_escolha" dificuldade="dificil">
+        <enunciado>Livro sobre arquivologia digital e gestão documental eletrônica. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">020</alternativa>
+            <alternativa id="B">025</alternativa>
+            <alternativa id="C">651.5</alternativa>
+            <alternativa id="D">006</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Gestão documental e arquivos administrativos pertencem à 651.5.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre botânica e plantas tropicais. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">580</alternativa>
+            <alternativa id="B">590</alternativa>
+            <alternativa id="C">570</alternativa>
+            <alternativa id="D">630</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Botânica pertence à classe 580.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre jornalismo digital e mídia online. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">070</alternativa>
+            <alternativa id="B">302</alternativa>
+            <alternativa id="C">004</alternativa>
+            <alternativa id="D">791</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Jornalismo pertence à classe 070.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre religião budista e filosofia oriental. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">200</alternativa>
+            <alternativa id="B">294</alternativa>
+            <alternativa id="C">181</alternativa>
+            <alternativa id="D">299</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Budismo pertence à notação 294.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre estatística aplicada à pesquisa científica. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">510</alternativa>
+            <alternativa id="B">519.5</alternativa>
+            <alternativa id="C">001.4</alternativa>
+            <alternativa id="D">300.1</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Estatística pertence à notação 519.5.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre arquitetura moderna urbana. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">720</alternativa>
+            <alternativa id="B">710</alternativa>
+            <alternativa id="C">690</alternativa>
+            <alternativa id="D">624</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Arquitetura pertence à classe 720.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre políticas públicas de saúde. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">610</alternativa>
+            <alternativa id="B">362.1</alternativa>
+            <alternativa id="C">353</alternativa>
+            <alternativa id="D">614</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Serviços sociais relacionados à saúde pertencem à 362.1.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre física quântica e partículas subatômicas. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">530</alternativa>
+            <alternativa id="B">539</alternativa>
+            <alternativa id="C">520</alternativa>
+            <alternativa id="D">510</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Física moderna e quântica pertencem à 539.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre contabilidade empresarial. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">330</alternativa>
+            <alternativa id="B">650</alternativa>
+            <alternativa id="C">657</alternativa>
+            <alternativa id="D">658</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Contabilidade pertence à classe 657.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre cinema brasileiro contemporâneo. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">790</alternativa>
+            <alternativa id="B">791.43</alternativa>
+            <alternativa id="C">770</alternativa>
+            <alternativa id="D">869</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Cinema pertence à notação 791.43.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre internet das coisas e dispositivos inteligentes. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">004</alternativa>
+            <alternativa id="B">006</alternativa>
+            <alternativa id="C">621</alternativa>
+            <alternativa id="D">005</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Tecnologia computacional pertence à classe 004.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre mitologia grega antiga. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">292</alternativa>
+            <alternativa id="B">398</alternativa>
+            <alternativa id="C">180</alternativa>
+            <alternativa id="D">930</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Mitologia clássica grega pertence à 292.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre microbiologia médica e bactérias patogênicas. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">579</alternativa>
+            <alternativa id="B">616</alternativa>
+            <alternativa id="C">610</alternativa>
+            <alternativa id="D">570</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Microbiologia pertence à classe 579.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre dança contemporânea e expressão corporal. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">790</alternativa>
+            <alternativa id="B">792</alternativa>
+            <alternativa id="C">793.3</alternativa>
+            <alternativa id="D">780</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Dança pertence à notação 793.3.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre relações internacionais e diplomacia. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">320</alternativa>
+            <alternativa id="B">327</alternativa>
+            <alternativa id="C">341</alternativa>
+            <alternativa id="D">909</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Relações internacionais pertencem à 327.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre educação infantil e alfabetização. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">370</alternativa>
+            <alternativa id="B">372</alternativa>
+            <alternativa id="C">371</alternativa>
+            <alternativa id="D">028</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Educação básica e infantil pertencem à 372.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre energia elétrica e circuitos eletrônicos. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">530</alternativa>
+            <alternativa id="B">621.3</alternativa>
+            <alternativa id="C">004</alternativa>
+            <alternativa id="D">600</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>Engenharia elétrica pertence à 621.3.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Livro sobre folclore brasileiro e tradições populares. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">398</alternativa>
+            <alternativa id="B">394</alternativa>
+            <alternativa id="C">981</alternativa>
+            <alternativa id="D">869</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Folclore pertence à classe 398.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre meteorologia e mudanças climáticas. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">551.6</alternativa>
+            <alternativa id="B">363.7</alternativa>
+            <alternativa id="C">500</alternativa>
+            <alternativa id="D">910</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Meteorologia pertence à notação 551.6.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="multipla_escolha" dificuldade="dificil">
+        <enunciado>Livro sobre ontologias, web semântica e organização do conhecimento. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">020</alternativa>
+            <alternativa id="B">006.74</alternativa>
+            <alternativa id="C">025.4</alternativa>
+            <alternativa id="D">001</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>Organização e representação do conhecimento pertencem à faixa 025.4.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Livro sobre arqueologia egípcia e civilizações antigas. Qual notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">930</alternativa>
+            <alternativa id="B">932</alternativa>
+            <alternativa id="C">981</alternativa>
+            <alternativa id="D">939</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>História e arqueologia do Egito Antigo pertencem à 932.</explicacao>
+    </questao>
+
+</quiz>

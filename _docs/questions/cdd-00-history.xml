@@ -199,12 +199,6 @@
         <explicacao>O sistema decimal permite expansão contínua.</explicacao>
     </questao>
 
-    <questao id="22" tipo="dissertativa" dificuldade="dificil">
-        <enunciado>Explique a relação entre especificidade e síntese na CDD.</enunciado>
-        <respostaCorreta>A especificidade busca representar o assunto mais preciso possível; a síntese permite combinar elementos para representar assuntos complexos.</respostaCorreta>
-        <explicacao>A síntese é importante para documentos multidisciplinares.</explicacao>
-    </questao>
-
     <questao id="23" tipo="multipla_resposta" dificuldade="media">
         <enunciado>Quais áreas pertencem às Ciências Naturais?</enunciado>
         <alternativas>
@@ -215,18 +209,6 @@
         </alternativas>
         <respostaCorreta>A,B,D</respostaCorreta>
         <explicacao>Todas pertencem à classe 500.</explicacao>
-    </questao>
-
-    <questao id="24" tipo="multipla_escolha" dificuldade="facil">
-        <enunciado>Quem administra atualmente a CDD?</enunciado>
-        <alternativas>
-            <alternativa id="A">UNESCO</alternativa>
-            <alternativa id="B">Library of Congress</alternativa>
-            <alternativa id="C">OCLC</alternativa>
-            <alternativa id="D">IFLA</alternativa>
-        </alternativas>
-        <respostaCorreta>C</respostaCorreta>
-        <explicacao>A OCLC é responsável pela manutenção da CDD.</explicacao>
     </questao>
 
     <questao id="25" tipo="verdadeiro_falso" dificuldade="facil">
@@ -311,12 +293,6 @@
         </alternativas>
         <respostaCorreta>C</respostaCorreta>
         <explicacao>Física pertence à classe 530.</explicacao>
-    </questao>
-
-    <questao id="34" tipo="dissertativa" dificuldade="dificil">
-        <enunciado>Explique o conceito de hospitalidade na CDD.</enunciado>
-        <respostaCorreta>Hospitalidade refere-se à capacidade do sistema de incorporar novos assuntos sem comprometer sua estrutura.</respostaCorreta>
-        <explicacao>A flexibilidade é essencial em sistemas classificatórios.</explicacao>
     </questao>
 
     <questao id="35" tipo="multipla_escolha" dificuldade="media">
@@ -437,12 +413,6 @@
         <enunciado>A ordem das classes na CDD é arbitrária e sem lógica temática.</enunciado>
         <respostaCorreta>Falso</respostaCorreta>
         <explicacao>Existe uma lógica histórica e temática na sequência das classes.</explicacao>
-    </questao>
-
-    <questao id="48" tipo="dissertativa" dificuldade="media">
-        <enunciado>Explique o conceito de classe principal na CDD.</enunciado>
-        <respostaCorreta>Classe principal é um dos dez grandes agrupamentos do conhecimento representados pelas centenas.</respostaCorreta>
-        <explicacao>As classes principais estruturam todo o sistema.</explicacao>
     </questao>
 
     <questao id="49" tipo="multipla_escolha" dificuldade="dificil">

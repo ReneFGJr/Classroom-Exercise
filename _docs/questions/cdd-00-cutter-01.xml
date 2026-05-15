@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Notação de Cutter" totalQuestoes="50">
+
+    <questao id="1" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Silva".</enunciado>
+        <respostaCorreta>S586</respostaCorreta>
+        <explicacao>A letra inicial representa o sobrenome e os números mantêm a ordem alfabética.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Souza".</enunciado>
+        <respostaCorreta>S729</respostaCorreta>
+        <explicacao>A tabela Cutter-Sanborn utiliza combinações alfanuméricas para organizar autores.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Santos".</enunciado>
+        <respostaCorreta>S237</respostaCorreta>
+        <explicacao>A notação aproxima alfabeticamente os sobrenomes.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Oliveira".</enunciado>
+        <respostaCorreta>O48</respostaCorreta>
+        <explicacao>A inicial do sobrenome é seguida por números derivados da tabela Cutter.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Costa".</enunciado>
+        <respostaCorreta>C837</respostaCorreta>
+        <explicacao>A notação Cutter auxilia na ordenação alfabética nas estantes.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Pereira".</enunciado>
+        <respostaCorreta>P436</respostaCorreta>
+        <explicacao>A tabela Cutter representa sobrenomes de forma padronizada.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Ferreira".</enunciado>
+        <respostaCorreta>F383</respostaCorreta>
+        <explicacao>Os números variam conforme as letras subsequentes do sobrenome.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Almeida".</enunciado>
+        <respostaCorreta>A447</respostaCorreta>
+        <explicacao>A notação permite distinguir autores com sobrenomes semelhantes.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Rodrigues".</enunciado>
+        <respostaCorreta>R696</respostaCorreta>
+        <explicacao>A Cutter-Sanborn é amplamente utilizada em bibliotecas.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Gere a notação de Cutter para o autor "Martins".</enunciado>
+        <respostaCorreta>M386</respostaCorreta>
+        <explicacao>A notação ajuda a individualizar obras de diferentes autores.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Barbosa".</enunciado>
+        <respostaCorreta>B238</respostaCorreta>
+        <explicacao>As tabelas Cutter mantêm coerência na ordenação bibliográfica.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Cardoso".</enunciado>
+        <respostaCorreta>C268</respostaCorreta>
+        <explicacao>A combinação de letra e números representa o sobrenome.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Dias".</enunciado>
+        <respostaCorreta>D541</respostaCorreta>
+        <explicacao>A notação facilita a recuperação física dos documentos.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Gomes".</enunciado>
+        <respostaCorreta>G633</respostaCorreta>
+        <explicacao>A tabela Cutter é baseada em aproximação alfabética.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Lima".</enunciado>
+        <respostaCorreta>L732</respostaCorreta>
+        <explicacao>A notação Cutter complementa a classificação temática.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Melo".</enunciado>
+        <respostaCorreta>M528</respostaCorreta>
+        <explicacao>Os números são definidos segundo tabelas padronizadas.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Nascimento".</enunciado>
+        <respostaCorreta>N244</respostaCorreta>
+        <explicacao>A notação evita conflitos entre autores semelhantes.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Ribeiro".</enunciado>
+        <respostaCorreta>R484</respostaCorreta>
+        <explicacao>A Cutter-Sanborn é muito utilizada junto à CDD.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Teixeira".</enunciado>
+        <respostaCorreta>T266</respostaCorreta>
+        <explicacao>A notação representa autores de maneira abreviada.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Araujo".</enunciado>
+        <respostaCorreta>A663</respostaCorreta>
+        <explicacao>A primeira letra corresponde à inicial do sobrenome.</explicacao>
+    </questao>
+
+    <questao id="21" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Campos".</enunciado>
+        <respostaCorreta>C198</respostaCorreta>
+        <explicacao>A tabela Cutter organiza sobrenomes em sequência alfabética.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Castro".</enunciado>
+        <respostaCorreta>C355</respostaCorreta>
+        <explicacao>A notação auxilia no arranjo sistemático das coleções.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Correia".</enunciado>
+        <respostaCorreta>C824</respostaCorreta>
+        <explicacao>A Cutter-Sanborn permite diferenciação entre autores.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Freitas".</enunciado>
+        <respostaCorreta>F866</respostaCorreta>
+        <explicacao>O código alfanumérico representa o sobrenome do autor.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="dissertativa" dificuldade="media">
+        <enunciado>Gere a notação de Cutter para o autor "Machado".</enunciado>
+        <respostaCorreta>M149</respostaCorreta>
+        <explicacao>A notação Cutter é aplicada em catálogos e lombadas.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Monteiro".</enunciado>
+        <respostaCorreta>M775</respostaCorreta>
+        <explicacao>A ordem alfabética é preservada pela combinação numérica.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Moreira".</enunciado>
+        <respostaCorreta>M838</respostaCorreta>
+        <explicacao>A Cutter-Sanborn reduz ambiguidades entre autores.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Neves".</enunciado>
+        <respostaCorreta>N518</respostaCorreta>
+        <explicacao>A notação é derivada das primeiras letras do sobrenome.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Peixoto".</enunciado>
+        <respostaCorreta>P379</respostaCorreta>
+        <explicacao>A Cutter-Sanborn segue convenções biblioteconômicas.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Queiroz".</enunciado>
+        <respostaCorreta>Q3</respostaCorreta>
+        <explicacao>A letra inicial pode ser seguida de diferentes extensões numéricas.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Rezende".</enunciado>
+        <respostaCorreta>R467</respostaCorreta>
+        <explicacao>A notação Cutter complementa números de classificação.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Rocha".</enunciado>
+        <respostaCorreta>R672</respostaCorreta>
+        <explicacao>A tabela Cutter é usada em diferentes sistemas classificatórios.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Vieira".</enunciado>
+        <respostaCorreta>V658</respostaCorreta>
+        <explicacao>A notação organiza autores de forma consistente.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Xavier".</enunciado>
+        <respostaCorreta>X3</respostaCorreta>
+        <explicacao>Autores menos frequentes podem utilizar notações reduzidas.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Abreu".</enunciado>
+        <respostaCorreta>A162</respostaCorreta>
+        <explicacao>A sequência numérica deriva da tabela Cutter-Sanborn.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Bittencourt".</enunciado>
+        <respostaCorreta>B624</respostaCorreta>
+        <explicacao>A notação individualiza autores com precisão.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Cunha".</enunciado>
+        <respostaCorreta>C972</respostaCorreta>
+        <explicacao>A Cutter-Sanborn é uma tabela amplamente difundida.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Domingues".</enunciado>
+        <respostaCorreta>D671</respostaCorreta>
+        <explicacao>A notação facilita a localização física de obras.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Esteves".</enunciado>
+        <respostaCorreta>E79</respostaCorreta>
+        <explicacao>A tabela Cutter representa a sequência alfabética de sobrenomes.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Figueiredo".</enunciado>
+        <respostaCorreta>F475</respostaCorreta>
+        <explicacao>A notação é utilizada em etiquetas e registros catalográficos.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Garcia".</enunciado>
+        <respostaCorreta>G216</respostaCorreta>
+        <explicacao>A letra inicial é seguida de números específicos da tabela.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Henrique".</enunciado>
+        <respostaCorreta>H518</respostaCorreta>
+        <explicacao>A notação mantém consistência na organização documental.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Jesus".</enunciado>
+        <respostaCorreta>J58</respostaCorreta>
+        <explicacao>A Cutter-Sanborn permite expansão ordenada de autores.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Klein".</enunciado>
+        <respostaCorreta>K64</respostaCorreta>
+        <explicacao>A notação Cutter pode ser aplicada a sobrenomes estrangeiros.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Leite".</enunciado>
+        <respostaCorreta>L533</respostaCorreta>
+        <explicacao>A representação alfanumérica favorece a ordenação nas estantes.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Moraes".</enunciado>
+        <respostaCorreta>M827</respostaCorreta>
+        <explicacao>A tabela Cutter auxilia na diferenciação de entradas principais.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Nogueira".</enunciado>
+        <respostaCorreta>N778</respostaCorreta>
+        <explicacao>A notação é amplamente usada em bibliotecas universitárias.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Prado".</enunciado>
+        <respostaCorreta>P896</respostaCorreta>
+        <explicacao>A Cutter-Sanborn organiza autores alfabeticamente.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Torres".</enunciado>
+        <respostaCorreta>T693</respostaCorreta>
+        <explicacao>A notação é um elemento importante da notação de chamada.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Gere a notação de Cutter para o autor "Valente".</enunciado>
+        <respostaCorreta>V168</respostaCorreta>
+        <explicacao>A tabela Cutter-Sanborn permite padronização bibliográfica.</explicacao>
+    </questao>
+
+</quiz>

@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Classificação Decimal de Dewey" totalQuestoes="50">
+
+    <questao id="1" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Gestão de Dados Científicos em Repositórios Federados"
+Autor: Helena Prado
+Assuntos: interoperabilidade semântica, preservação digital distribuída, metadados FAIR
+Resenha: Analisa estratégias colaborativas para compartilhamento científico interoperável.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.840285</respostaCorreta>
+        <explicacao>Relaciona repositórios digitais, preservação e interoperabilidade.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Inteligência Artificial Aplicada ao Diagnóstico Radiológico"
+Autor: Marcos Teixeira
+Assuntos: aprendizado profundo médico, radiologia computadorizada, análise automatizada de imagens
+Resenha: Discute IA aplicada ao reconhecimento de padrões em exames clínicos.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>616.075028563</respostaCorreta>
+        <explicacao>Diagnóstico por imagem associado à inteligência artificial.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Arquitetura Sustentável para Regiões Costeiras"
+Autor: Luciana Barreto
+Assuntos: construção ecológica, urbanismo litorâneo, eficiência energética residencial
+Resenha: Estuda projetos arquitetônicos resilientes frente às mudanças climáticas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>720.47046</respostaCorreta>
+        <explicacao>Arquitetura sustentável com enfoque ambiental.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Políticas Públicas para Inclusão Digital Escolar"
+Autor: Renato Mello
+Assuntos: tecnologia educacional, acesso digital estudantil, administração pública educacional
+Resenha: Avalia impactos sociais de programas governamentais tecnológicos.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>379.260285</respostaCorreta>
+        <explicacao>Administração educacional associada à inclusão digital.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Bioética em Pesquisas Genéticas Humanas"
+Autor: André Vilar
+Assuntos: ética biomédica, manipulação genética, direitos humanos em saúde
+Resenha: Debate limites éticos das tecnologias genéticas contemporâneas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>174.2966</respostaCorreta>
+        <explicacao>Bioética relacionada à genética humana.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Mineração de Texto em Bases Jurídicas"
+Autor: Felipe Nogueira
+Assuntos: recuperação da informação legal, processamento textual, inteligência computacional
+Resenha: Explora algoritmos aplicados à jurisprudência digital.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>340.028563</respostaCorreta>
+        <explicacao>Direito associado à mineração textual computacional.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Turismo Cultural em Patrimônios Ferroviários"
+Autor: Carla Mendes
+Assuntos: memória ferroviária, patrimônio industrial, turismo histórico
+Resenha: Analisa preservação ferroviária como atrativo cultural regional.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>338.47918113</respostaCorreta>
+        <explicacao>Turismo cultural ligado ao patrimônio ferroviário.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Segurança Cibernética em Infraestruturas Hospitalares"
+Autor: Vinicius Rocha
+Assuntos: proteção de dados médicos, redes hospitalares, ataques digitais
+Resenha: Examina vulnerabilidades computacionais em ambientes hospitalares conectados.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>610.2854678</respostaCorreta>
+        <explicacao>Saúde integrada à segurança computacional.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Linguística Computacional para Tradução Automática"
+Autor: Sérgio Lima
+Assuntos: tradução neural, processamento de linguagem natural, semântica computacional
+Resenha: Estuda modelos automáticos multilíngues para tradução textual.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>410.28563</respostaCorreta>
+        <explicacao>Linguística aplicada à computação.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Mudanças Climáticas e Agricultura Familiar"
+Autor: Patrícia Ramos
+Assuntos: adaptação agrícola, sustentabilidade rural, impactos ambientais climáticos
+Resenha: Investiga estratégias resilientes para pequenos produtores agrícolas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>630.2515</respostaCorreta>
+        <explicacao>Impactos climáticos na agricultura sustentável.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Preservação Digital de Acervos Audiovisuais"
+Autor: Mariana Lopes
+Assuntos: arquivamento audiovisual, migração digital, memória institucional
+Resenha: Discute conservação tecnológica de vídeos históricos digitais.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.846</respostaCorreta>
+        <explicacao>Preservação de documentos audiovisuais digitais.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Nanotecnologia Aplicada à Engenharia Biomédica"
+Autor: Roberto Pires
+Assuntos: biomateriais inteligentes, nanotubos terapêuticos, engenharia médica
+Resenha: Explora aplicações nanométricas em dispositivos biomédicos avançados.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>610.2804</respostaCorreta>
+        <explicacao>Engenharia biomédica associada à nanotecnologia.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Governança Algorítmica e Democracia Digital"
+Autor: Elisa Fernandes
+Assuntos: regulação tecnológica, plataformas digitais, participação política online
+Resenha: Debate algoritmos e transparência em ambientes democráticos digitais.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>320.0285</respostaCorreta>
+        <explicacao>Ciência política vinculada à tecnologia digital.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Catalogação Semântica com Linked Data"
+Autor: Júlia Cardoso
+Assuntos: web semântica, catalogação automatizada, interoperabilidade bibliográfica
+Resenha: Apresenta modelos bibliográficos conectados em ambientes digitais.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.30285</respostaCorreta>
+        <explicacao>Catalogação integrada à web semântica.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Criptografia Pós-Quântica"
+Autor: Gustavo Azevedo
+Assuntos: segurança computacional, computação quântica, protocolos criptográficos
+Resenha: Analisa métodos resistentes a computadores quânticos futuros.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>005.824</respostaCorreta>
+        <explicacao>Criptografia avançada em computação.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Educação Inclusiva para Deficiência Visual"
+Autor: Teresa Guimarães
+Assuntos: acessibilidade pedagógica, ensino adaptado, inclusão escolar
+Resenha: Investiga práticas educacionais acessíveis para estudantes cegos.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>371.911</respostaCorreta>
+        <explicacao>Educação especial para deficiência visual.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Economia Circular na Indústria Têxtil"
+Autor: Bianca Silveira
+Assuntos: reaproveitamento industrial, sustentabilidade produtiva, resíduos têxteis
+Resenha: Discute modelos sustentáveis para produção e reaproveitamento têxtil.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>338.47677</respostaCorreta>
+        <explicacao>Economia industrial sustentável aplicada ao setor têxtil.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Machine Learning para Detecção de Fraudes Bancárias"
+Autor: Paulo Martins
+Assuntos: inteligência financeira, análise preditiva, crimes eletrônicos
+Resenha: Examina algoritmos preditivos contra fraudes digitais financeiras.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>332.178028563</respostaCorreta>
+        <explicacao>Finanças e aprendizado de máquina.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Museologia Digital e Realidade Virtual"
+Autor: Fernanda Reis
+Assuntos: exposições imersivas, patrimônio digital, realidade aumentada
+Resenha: Analisa museus interativos com tecnologias imersivas contemporâneas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>069.0285</respostaCorreta>
+        <explicacao>Museologia aplicada ao ambiente digital.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Direitos Digitais e Proteção de Dados"
+Autor: Camila Duarte
+Assuntos: privacidade online, legislação tecnológica, segurança informacional
+Resenha: Debate regulamentação jurídica de dados pessoais digitais.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>342.0858</respostaCorreta>
+        <explicacao>Direitos relacionados à privacidade digital.</explicacao>
+    </questao>
+
+    <questao id="21" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "História Ambiental da Amazônia Colonial"
+Autor: Ricardo Farias
+Assuntos: ecologia histórica, ocupação amazônica, exploração colonial
+Resenha: Examina impactos ambientais da colonização amazônica.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>981.13</respostaCorreta>
+        <explicacao>História regional amazônica.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Psicologia do Consumo Digital"
+Autor: Larissa Tavares
+Assuntos: comportamento online, marketing digital, decisões emocionais
+Resenha: Analisa fatores psicológicos envolvidos no consumo eletrônico.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>153.83</respostaCorreta>
+        <explicacao>Psicologia aplicada ao comportamento de consumo.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Robótica Autônoma para Agricultura de Precisão"
+Autor: Henrique Alves
+Assuntos: automação agrícola, drones rurais, sensores inteligentes
+Resenha: Explora robôs autônomos em monitoramento agrícola sustentável.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>631.35852</respostaCorreta>
+        <explicacao>Robótica aplicada à agricultura.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Conservação Preventiva em Arquivos Históricos"
+Autor: Denise Moura
+Assuntos: deterioração documental, preservação física, acervos permanentes
+Resenha: Apresenta técnicas preventivas para conservação arquivística.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.84</respostaCorreta>
+        <explicacao>Preservação de acervos documentais.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Ética da Inteligência Artificial Generativa"
+Autor: Fábio Correia
+Assuntos: responsabilidade algorítmica, sistemas generativos, impactos sociais digitais
+Resenha: Debate consequências éticas de modelos generativos automatizados.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>174.90028563</respostaCorreta>
+        <explicacao>Ética aplicada à inteligência artificial.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Comunicação Científica em Acesso Aberto"
+Autor: Márcia Oliveira
+Assuntos: periódicos científicos digitais, ciência aberta, publicação acadêmica
+Resenha: Analisa transformações editoriais no acesso aberto científico.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>070.5795</respostaCorreta>
+        <explicacao>Publicação científica e acesso aberto.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Engenharia de Software para Sistemas Críticos"
+Autor: Diego Campos
+Assuntos: confiabilidade computacional, sistemas embarcados, testes automatizados
+Resenha: Discute qualidade e segurança em softwares críticos.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>005.14</respostaCorreta>
+        <explicacao>Desenvolvimento avançado de software.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Geopolítica Energética e Hidrogênio Verde"
+Autor: Bruno Esteves
+Assuntos: energia renovável, políticas internacionais, sustentabilidade energética
+Resenha: Avalia disputas geopolíticas envolvendo novas matrizes energéticas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>333.794</respostaCorreta>
+        <explicacao>Energia renovável e política energética.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Bibliometria Aplicada à Ciência Aberta"
+Autor: Juliano Freitas
+Assuntos: indicadores científicos, análise de citações, comunicação científica
+Resenha: Explora métricas acadêmicas em ambientes de ciência aberta.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>020.72</respostaCorreta>
+        <explicacao>Bibliometria vinculada à ciência da informação.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Antropologia das Comunidades Ribeirinhas"
+Autor: Sonia Ribeiro
+Assuntos: culturas amazônicas, populações tradicionais, identidade regional
+Resenha: Investiga práticas culturais de comunidades fluviais amazônicas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>305.8981</respostaCorreta>
+        <explicacao>Grupos culturais brasileiros específicos.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Blockchain em Cadeias Logísticas Globais"
+Autor: Rafael Costa
+Assuntos: rastreabilidade digital, logística internacional, contratos inteligentes
+Resenha: Examina blockchain aplicado à gestão logística mundial.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>658.70285</respostaCorreta>
+        <explicacao>Logística empresarial com tecnologias digitais.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Didática da Matemática Inclusiva"
+Autor: Cláudia Moreira
+Assuntos: ensino adaptado, aprendizagem matemática, acessibilidade educacional
+Resenha: Propõe métodos inclusivos para ensino matemático escolar.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>510.71</respostaCorreta>
+        <explicacao>Ensino da matemática.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Computação Quântica e Algoritmos Híbridos"
+Autor: Eduardo Leal
+Assuntos: qubits, algoritmos quânticos, processamento computacional avançado
+Resenha: Introduz aplicações híbridas entre computação clássica e quântica.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>004.1</respostaCorreta>
+        <explicacao>Computação avançada e arquiteturas computacionais.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Fotografia Documental e Memória Social"
+Autor: Adriana Torres
+Assuntos: documentação visual, patrimônio imagético, memória coletiva
+Resenha: Analisa fotografia como registro social histórico.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>770.9</respostaCorreta>
+        <explicacao>História e documentação fotográfica.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Saúde Mental em Ambientes Corporativos Digitais"
+Autor: Leandro Pacheco
+Assuntos: trabalho remoto, sofrimento psíquico, organizações digitais
+Resenha: Investiga impactos emocionais do trabalho digital contemporâneo.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>158.72</respostaCorreta>
+        <explicacao>Psicologia aplicada ao ambiente profissional.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Oceanografia e Poluição Marinha"
+Autor: Natália Figueiredo
+Assuntos: ecossistemas costeiros, contaminação oceânica, impactos ambientais
+Resenha: Estuda poluentes industriais em ecossistemas marítimos.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>551.46</respostaCorreta>
+        <explicacao>Oceanografia e meio ambiente marinho.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Redes Neurais Aplicadas à Tradução Jurídica"
+Autor: Igor Santana
+Assuntos: tradução automática legal, inteligência artificial linguística, semântica jurídica
+Resenha: Analisa tradução automatizada de documentos legais multilíngues.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>418.02028563</respostaCorreta>
+        <explicacao>Tradução assistida por inteligência artificial.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Gestão Arquivística em Universidades Públicas"
+Autor: Silvia Duarte
+Assuntos: documentos institucionais, administração arquivística, políticas documentais
+Resenha: Debate organização documental em instituições universitárias públicas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.1714</respostaCorreta>
+        <explicacao>Gestão arquivística institucional.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Engenharia Genética e Agricultura Transgênica"
+Autor: Marcelo Vieira
+Assuntos: organismos geneticamente modificados, biotecnologia agrícola, produção vegetal
+Resenha: Discute impactos agrícolas da engenharia genética vegetal.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>631.5233</respostaCorreta>
+        <explicacao>Biotecnologia aplicada à agricultura.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Cinema Latino-Americano Contemporâneo"
+Autor: Paula Andrade
+Assuntos: audiovisual regional, produção cinematográfica, identidade cultural latino-americana
+Resenha: Analisa tendências recentes do cinema latino-americano.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>791.43098</respostaCorreta>
+        <explicacao>Cinema latino-americano.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Modelagem Matemática de Epidemias"
+Autor: Renato Lopes
+Assuntos: epidemiologia computacional, modelos probabilísticos, saúde pública
+Resenha: Explora previsões matemáticas para propagação epidêmica.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>614.4015182</respostaCorreta>
+        <explicacao>Modelagem matemática aplicada à epidemiologia.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Filosofia da Tecnologia Digital"
+Autor: Denise Almeida
+Assuntos: ética tecnológica, pensamento contemporâneo, sociedade conectada
+Resenha: Reflete criticamente sobre tecnologia e experiência humana.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>303.483</respostaCorreta>
+        <explicacao>Tecnologia e impactos sociais.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Big Data para Políticas de Saúde Pública"
+Autor: Tatiane Cunha
+Assuntos: análise massiva de dados, epidemiologia digital, gestão pública
+Resenha: Examina uso estratégico de grandes dados em saúde pública.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>362.1068</respostaCorreta>
+        <explicacao>Administração em saúde com análise de dados.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Literatura Afro-Brasileira Contemporânea"
+Autor: Joana Batista
+Assuntos: identidade negra, narrativa brasileira, literatura contemporânea
+Resenha: Analisa autores afro-brasileiros contemporâneos e representatividade cultural.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>869.93509896</respostaCorreta>
+        <explicacao>Literatura brasileira afrodescendente.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Internet das Coisas em Cidades Inteligentes"
+Autor: Thiago Moura
+Assuntos: sensores urbanos, automação pública, infraestrutura conectada
+Resenha: Explora aplicações urbanas da internet das coisas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>307.760285</respostaCorreta>
+        <explicacao>Cidades inteligentes e tecnologia urbana.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Nutrição Clínica em Pacientes Diabéticos"
+Autor: Fernanda Costa
+Assuntos: dietoterapia, controle glicêmico, alimentação terapêutica
+Resenha: Discute estratégias alimentares para diabetes mellitus.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>613.26244</respostaCorreta>
+        <explicacao>Nutrição clínica aplicada ao diabetes.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Preservação de Dados Científicos em Nuvem"
+Autor: Ricardo Menezes
+Assuntos: armazenamento distribuído, preservação digital, repositórios científicos
+Resenha: Avalia riscos tecnológicos em ambientes científicos distribuídos.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.8402854678</respostaCorreta>
+        <explicacao>Preservação digital em computação em nuvem.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="dissertativa" dificuldade="media">
+        <enunciado>
+Livro: "Sociologia das Redes Sociais Online"
+Autor: Mauro Dias
+Assuntos: interação digital, comportamento coletivo, plataformas virtuais
+Resenha: Investiga sociabilidade contemporânea mediada por plataformas digitais.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>302.30285</respostaCorreta>
+        <explicacao>Sociologia das interações digitais.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Biologia Molecular do Câncer"
+Autor: Priscila Navarro
+Assuntos: oncologia genética, mutações celulares, biologia tumoral
+Resenha: Analisa mecanismos moleculares envolvidos no desenvolvimento tumoral.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>616.9940715</respostaCorreta>
+        <explicacao>Câncer em perspectiva molecular.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>
+Livro: "Curadoria Digital em Acervos de Humanidades"
+Autor: Eduardo Fonseca
+Assuntos: preservação digital, organização do conhecimento, humanidades digitais
+Resenha: Debate práticas curatoriais para coleções digitais acadêmicas.
+Informe a notação mais adequada da CDD.
+        </enunciado>
+        <respostaCorreta>025.431</respostaCorreta>
+        <explicacao>Curadoria e organização de acervos digitais.</explicacao>
+    </questao>
+
+</quiz>

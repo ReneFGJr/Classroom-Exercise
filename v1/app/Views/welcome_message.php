@@ -15,10 +15,35 @@
             <p class="lead text-secondary">Explore as avaliacoes cadastradas e acompanhe os periodos de aplicacao.</p>
         </div>
 
+        <?php $usuarioBasico = isset($usuario_basico) && is_array($usuario_basico) ? $usuario_basico : []; ?>
+        <section class="card border-0 shadow-sm mb-4" id="dados-usuario">
+            <div class="card-header bg-white py-3">
+                <h2 class="h5 mb-0">Dados do usuario</h2>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="small text-secondary">Cracha</div>
+                        <div class="fw-semibold"><?= esc((string) ($usuarioBasico['idcard'] ?? '-')) ?></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="small text-secondary">Nome</div>
+                        <div class="fw-semibold"><?= esc((string) ($usuarioBasico['nome'] ?? '-')) ?></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="small text-secondary">Email</div>
+                        <div class="fw-semibold"><?= esc((string) ($usuarioBasico['email'] ?? '-')) ?></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="avaliacoes" class="card border-0 shadow-sm">
             <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
                 <h2 class="h5 mb-0">Avaliacoes</h2>
-                <a href="/admin/avaliations" class="btn btn-outline-primary btn-sm">Gerenciar</a>
+                <?php if (session('is_admin')): ?>
+                    <a href="/admin/avaliations" class="btn btn-primary">Gerenciar</a>
+                <?php endif; ?>
             </div>
             <div class="card-body">
                 <?php $listaAvaliacoes = isset($avaliacoes) && is_array($avaliacoes) ? $avaliacoes : []; ?>

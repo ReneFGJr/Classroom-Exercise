@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Classificação Decimal de Dewey" totalQuestoes="50">
+
+    <questao id="1" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.431.</enunciado>
+        <respostaCorreta>Catalogação descritiva.</respostaCorreta>
+        <explicacao>A notação 025.431 corresponde à catalogação descritiva em Biblioteconomia.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 005.133.</enunciado>
+        <respostaCorreta>Linguagens de programação.</respostaCorreta>
+        <explicacao>A notação 005.133 representa linguagens de programação de computadores.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 070.573.</enunciado>
+        <respostaCorreta>Jornalismo digital.</respostaCorreta>
+        <explicacao>A notação está relacionada ao jornalismo em ambientes digitais.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 370.152.</enunciado>
+        <respostaCorreta>Psicologia educacional.</respostaCorreta>
+        <explicacao>A notação refere-se à aplicação da psicologia na educação.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 616.858.</enunciado>
+        <respostaCorreta>Transtornos neurológicos.</respostaCorreta>
+        <explicacao>A notação pertence à área médica de neurologia e distúrbios relacionados.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 621.382.</enunciado>
+        <respostaCorreta>Telecomunicações eletrônicas.</respostaCorreta>
+        <explicacao>A notação trata de tecnologias de telecomunicação.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.0427.</enunciado>
+        <respostaCorreta>Bibliotecas digitais.</respostaCorreta>
+        <explicacao>A notação refere-se à organização e gestão de bibliotecas digitais.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 006.312.</enunciado>
+        <respostaCorreta>Inteligência artificial.</respostaCorreta>
+        <explicacao>A notação está relacionada à IA e sistemas inteligentes.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 020.285.</enunciado>
+        <respostaCorreta>Automação de bibliotecas.</respostaCorreta>
+        <explicacao>A notação aborda informatização e automação em bibliotecas.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 658.4038.</enunciado>
+        <respostaCorreta>Gestão da informação.</respostaCorreta>
+        <explicacao>A notação refere-se à administração e gestão da informação organizacional.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 004.678.</enunciado>
+        <respostaCorreta>Internet.</respostaCorreta>
+        <explicacao>A notação trata de redes de computadores e internet.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 378.981.</enunciado>
+        <respostaCorreta>Ensino superior no Brasil.</respostaCorreta>
+        <explicacao>A notação combina educação superior e subdivisão geográfica do Brasil.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 305.4209.</enunciado>
+        <respostaCorreta>História das mulheres.</respostaCorreta>
+        <explicacao>A notação aborda estudos sobre mulheres em perspectiva histórica.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 641.594.</enunciado>
+        <respostaCorreta>Culinária europeia.</respostaCorreta>
+        <explicacao>A notação refere-se à gastronomia regional europeia.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 302.231.</enunciado>
+        <respostaCorreta>Comunicação de massa.</respostaCorreta>
+        <explicacao>A notação pertence aos estudos da comunicação social.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 796.334.</enunciado>
+        <respostaCorreta>Futebol.</respostaCorreta>
+        <explicacao>A notação representa o esporte futebol.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 599.789.</enunciado>
+        <respostaCorreta>Primatas.</respostaCorreta>
+        <explicacao>A notação refere-se ao estudo zoológico dos primatas.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 551.576.</enunciado>
+        <respostaCorreta>Meteorologia.</respostaCorreta>
+        <explicacao>A notação trata de fenômenos atmosféricos e clima.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 808.066.</enunciado>
+        <respostaCorreta>Redação técnica.</respostaCorreta>
+        <explicacao>A notação está relacionada à escrita técnica e científica.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 981.043.</enunciado>
+        <respostaCorreta>História do Brasil Império.</respostaCorreta>
+        <explicacao>A notação corresponde ao período imperial brasileiro.</explicacao>
+    </questao>
+
+    <questao id="21" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 025.524.</enunciado>
+        <respostaCorreta>Indexação.</respostaCorreta>
+        <explicacao>A notação refere-se à análise e representação temática da informação.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 004.019.</enunciado>
+        <respostaCorreta>Aspectos psicológicos da computação.</respostaCorreta>
+        <explicacao>A notação relaciona computação e fatores humanos.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 340.115.</enunciado>
+        <respostaCorreta>Direitos humanos.</respostaCorreta>
+        <explicacao>A notação pertence ao campo jurídico dos direitos humanos.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.00285.</enunciado>
+        <respostaCorreta>Tecnologia da informação em bibliotecas.</respostaCorreta>
+        <explicacao>A notação integra Biblioteconomia e informática.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 610.285.</enunciado>
+        <respostaCorreta>Informática médica.</respostaCorreta>
+        <explicacao>A notação relaciona medicina e tecnologia da informação.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 741.5973.</enunciado>
+        <respostaCorreta>Histórias em quadrinhos dos Estados Unidos.</respostaCorreta>
+        <explicacao>A notação representa HQs norte-americanas.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 791.4572.</enunciado>
+        <respostaCorreta>Séries de televisão.</respostaCorreta>
+        <explicacao>A notação refere-se à produção televisiva seriada.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 364.168.</enunciado>
+        <respostaCorreta>Corrupção política.</respostaCorreta>
+        <explicacao>A notação aborda crimes relacionados à corrupção.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 306.461.</enunciado>
+        <respostaCorreta>Sociologia da saúde.</respostaCorreta>
+        <explicacao>A notação trata das relações sociais envolvendo saúde e medicina.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 070.50981.</enunciado>
+        <respostaCorreta>História do jornalismo no Brasil.</respostaCorreta>
+        <explicacao>A notação combina jornalismo e subdivisão geográfica brasileira.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 025.321.</enunciado>
+        <respostaCorreta>Desenvolvimento de coleções.</respostaCorreta>
+        <explicacao>A notação refere-se à seleção e aquisição de materiais em bibliotecas.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 579.768.</enunciado>
+        <respostaCorreta>Vírus.</respostaCorreta>
+        <explicacao>A notação trata do estudo microbiológico dos vírus.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 910.9164.</enunciado>
+        <respostaCorreta>Geografia da África.</respostaCorreta>
+        <explicacao>A notação representa estudos geográficos africanos.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.4311.</enunciado>
+        <respostaCorreta>Catalogação de livros.</respostaCorreta>
+        <explicacao>A notação especifica catalogação aplicada a livros.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 658.872.</enunciado>
+        <respostaCorreta>Comércio eletrônico.</respostaCorreta>
+        <explicacao>A notação refere-se ao e-commerce.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.042.</enunciado>
+        <respostaCorreta>Serviços de informação eletrônica.</respostaCorreta>
+        <explicacao>A notação aborda serviços informacionais digitais.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 302.2244.</enunciado>
+        <respostaCorreta>Redes sociais.</respostaCorreta>
+        <explicacao>A notação relaciona interação social mediada digitalmente.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 001.6424.</enunciado>
+        <respostaCorreta>Big Data.</respostaCorreta>
+        <explicacao>A notação refere-se à análise massiva de dados.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 398.20981.</enunciado>
+        <respostaCorreta>Folclore brasileiro.</respostaCorreta>
+        <explicacao>A notação representa tradições populares do Brasil.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.567.</enunciado>
+        <respostaCorreta>Recuperação da informação.</respostaCorreta>
+        <explicacao>A notação trata de sistemas e técnicas de busca da informação.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 363.7387.</enunciado>
+        <respostaCorreta>Poluição atmosférica.</respostaCorreta>
+        <explicacao>A notação pertence aos estudos ambientais.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 641.8153.</enunciado>
+        <respostaCorreta>Culinária vegetariana.</respostaCorreta>
+        <explicacao>A notação aborda alimentação vegetariana.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.343.</enunciado>
+        <respostaCorreta>Preservação de documentos.</respostaCorreta>
+        <explicacao>A notação refere-se à conservação e preservação documental.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 006.7548.</enunciado>
+        <respostaCorreta>Realidade virtual.</respostaCorreta>
+        <explicacao>A notação refere-se a ambientes virtuais imersivos.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 658.3124.</enunciado>
+        <respostaCorreta>Gestão de pessoas.</respostaCorreta>
+        <explicacao>A notação aborda administração de recursos humanos.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 791.430973.</enunciado>
+        <respostaCorreta>Cinema dos Estados Unidos.</respostaCorreta>
+        <explicacao>A notação refere-se à produção cinematográfica norte-americana.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.00289.</enunciado>
+        <respostaCorreta>Aplicações de inteligência artificial em bibliotecas.</respostaCorreta>
+        <explicacao>A notação combina bibliotecas e tecnologias inteligentes.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 363.7063.</enunciado>
+        <respostaCorreta>Política ambiental.</respostaCorreta>
+        <explicacao>A notação aborda gestão e políticas ambientais.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 005.740285.</enunciado>
+        <respostaCorreta>Banco de dados em sistemas de informação.</respostaCorreta>
+        <explicacao>A notação relaciona bancos de dados e aplicações informacionais.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 025.4310285.</enunciado>
+        <respostaCorreta>Catalogação automatizada.</respostaCorreta>
+        <explicacao>A notação representa processos automatizados de catalogação bibliográfica.</explicacao>
+    </questao>
+
+</quiz>

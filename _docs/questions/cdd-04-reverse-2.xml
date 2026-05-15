@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Classificação Decimal de Dewey - Tabela 1" totalQuestoes="50">
+
+    <questao id="1" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 510.72.</enunciado>
+        <respostaCorreta>Ensino e estudo da Matemática.</respostaCorreta>
+        <explicacao>A subdivisão padrão -072 representa estudo e ensino.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 340.03.</enunciado>
+        <respostaCorreta>Dicionários, enciclopédias e obras de referência em Direito.</respostaCorreta>
+        <explicacao>A subdivisão -03 representa obras de referência.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 370.1.</enunciado>
+        <respostaCorreta>Filosofia e teoria da Educação.</respostaCorreta>
+        <explicacao>A subdivisão -01 representa filosofia e teoria.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 610.9.</enunciado>
+        <respostaCorreta>História, descrição e tratamento histórico da Medicina.</respostaCorreta>
+        <explicacao>A subdivisão -09 representa tratamento histórico e geográfico.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 020.5.</enunciado>
+        <respostaCorreta>Publicações seriadas em Biblioteconomia e Ciência da Informação.</respostaCorreta>
+        <explicacao>A subdivisão -05 representa publicações seriadas.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 004.678.</enunciado>
+        <respostaCorreta>Internet e redes de computadores.</respostaCorreta>
+        <explicacao>A notação refere-se a comunicação em redes computacionais.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 330.021.</enunciado>
+        <respostaCorreta>Sistemas, teoria e filosofia da Economia.</respostaCorreta>
+        <explicacao>A subdivisão -021 está relacionada à teoria e sistemas.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 780.92.</enunciado>
+        <respostaCorreta>Biografia de músicos e compositores.</respostaCorreta>
+        <explicacao>A subdivisão -092 representa biografia.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 025.04.</enunciado>
+        <respostaCorreta>Aspectos especiais de Biblioteconomia relacionados à tecnologia.</respostaCorreta>
+        <explicacao>A subdivisão -04 representa aspectos especiais.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 981.05.</enunciado>
+        <respostaCorreta>Periódicos sobre História do Brasil.</respostaCorreta>
+        <explicacao>A subdivisão -05 representa publicações seriadas.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 150.1.</enunciado>
+        <respostaCorreta>Filosofia e teoria da Psicologia.</respostaCorreta>
+        <explicacao>A subdivisão -01 refere-se à teoria e filosofia.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 530.072.</enunciado>
+        <respostaCorreta>Ensino e estudo da Física.</respostaCorreta>
+        <explicacao>A subdivisão -072 representa educação e pesquisa.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 070.5.</enunciado>
+        <respostaCorreta>Publicações seriadas de Jornalismo.</respostaCorreta>
+        <explicacao>A subdivisão -05 representa periódicos.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 398.9.</enunciado>
+        <respostaCorreta>História e tratamento geográfico do folclore.</respostaCorreta>
+        <explicacao>A subdivisão -09 representa aspectos históricos e geográficos.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.3.</enunciado>
+        <respostaCorreta>Catalogação em Biblioteconomia.</respostaCorreta>
+        <explicacao>A notação representa catalogação e classificação.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 658.0072.</enunciado>
+        <respostaCorreta>Pesquisa em Administração.</respostaCorreta>
+        <explicacao>A subdivisão -072 refere-se à pesquisa.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 610.014.</enunciado>
+        <respostaCorreta>Aspectos filosóficos e psicológicos da Medicina.</respostaCorreta>
+        <explicacao>A subdivisão -014 representa aspectos especiais relacionados ao tema.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 340.05.</enunciado>
+        <respostaCorreta>Periódicos jurídicos.</respostaCorreta>
+        <explicacao>A subdivisão -05 indica publicações seriadas.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 500.3.</enunciado>
+        <respostaCorreta>Dicionários e enciclopédias de Ciências Naturais.</respostaCorreta>
+        <explicacao>A subdivisão -03 representa obras de referência.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 780.07.</enunciado>
+        <respostaCorreta>Educação, pesquisa e assuntos relacionados à Música.</respostaCorreta>
+        <explicacao>A subdivisão -07 representa educação e pesquisa.</explicacao>
+    </questao>
+
+    <questao id="21" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.06.</enunciado>
+        <respostaCorreta>Organizações relacionadas à Biblioteconomia.</respostaCorreta>
+        <explicacao>A subdivisão -06 representa organizações e gestão.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 320.01.</enunciado>
+        <respostaCorreta>Filosofia e teoria da Ciência Política.</respostaCorreta>
+        <explicacao>A subdivisão -01 representa teoria e filosofia.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 869.09.</enunciado>
+        <respostaCorreta>História e crítica da literatura portuguesa.</respostaCorreta>
+        <explicacao>A subdivisão -09 indica abordagem histórica e crítica.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 910.3.</enunciado>
+        <respostaCorreta>Dicionários e enciclopédias de Geografia e Viagens.</respostaCorreta>
+        <explicacao>A subdivisão -03 refere-se a obras de referência.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 070.72.</enunciado>
+        <respostaCorreta>Ensino e pesquisa em Jornalismo.</respostaCorreta>
+        <explicacao>A subdivisão -072 representa estudo e pesquisa.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 340.092.</enunciado>
+        <respostaCorreta>Biografia de juristas.</respostaCorreta>
+        <explicacao>A subdivisão -092 representa biografias.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 020.10285.</enunciado>
+        <respostaCorreta>Aplicações computacionais em Biblioteconomia.</respostaCorreta>
+        <explicacao>A notação combina teoria e aplicações tecnológicas.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 610.05.</enunciado>
+        <respostaCorreta>Periódicos de Medicina.</respostaCorreta>
+        <explicacao>A subdivisão -05 indica publicações seriadas.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 370.9.</enunciado>
+        <respostaCorreta>História e tratamento geográfico da Educação.</respostaCorreta>
+        <explicacao>A subdivisão -09 representa aspectos históricos.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 540.72.</enunciado>
+        <respostaCorreta>Ensino e pesquisa em Química.</respostaCorreta>
+        <explicacao>A subdivisão -072 refere-se ao ensino e pesquisa.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 025.00285.</enunciado>
+        <respostaCorreta>Uso de computadores em Biblioteconomia.</respostaCorreta>
+        <explicacao>A extensão -0285 representa aplicações computacionais.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 658.001.</enunciado>
+        <respostaCorreta>Filosofia e teoria da Administração.</respostaCorreta>
+        <explicacao>A subdivisão -001 representa teoria do campo.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 510.3.</enunciado>
+        <respostaCorreta>Dicionários e enciclopédias de Matemática.</respostaCorreta>
+        <explicacao>A subdivisão -03 indica obras de referência.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 780.05.</enunciado>
+        <respostaCorreta>Periódicos de Música.</respostaCorreta>
+        <explicacao>A subdivisão -05 representa publicações seriadas.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 320.9.</enunciado>
+        <respostaCorreta>História e geografia da Ciência Política.</respostaCorreta>
+        <explicacao>A subdivisão -09 representa abordagem histórica.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 610.0142.</enunciado>
+        <respostaCorreta>Aspectos psicológicos da Medicina.</respostaCorreta>
+        <explicacao>A notação aprofunda aspectos especiais do assunto.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 340.072.</enunciado>
+        <respostaCorreta>Pesquisa e ensino do Direito.</respostaCorreta>
+        <explicacao>A subdivisão -072 representa pesquisa.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 500.9.</enunciado>
+        <respostaCorreta>História das Ciências Naturais.</respostaCorreta>
+        <explicacao>A subdivisão -09 indica tratamento histórico.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 020.72.</enunciado>
+        <respostaCorreta>Ensino e pesquisa em Biblioteconomia.</respostaCorreta>
+        <explicacao>A subdivisão -072 refere-se à pesquisa e ensino.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 330.092.</enunciado>
+        <respostaCorreta>Biografia de economistas.</respostaCorreta>
+        <explicacao>A subdivisão -092 indica biografias.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 610.003.</enunciado>
+        <respostaCorreta>Dicionários e enciclopédias de Medicina.</respostaCorreta>
+        <explicacao>A subdivisão -03 representa obras de referência.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 370.03.</enunciado>
+        <respostaCorreta>Dicionários e enciclopédias de Educação.</respostaCorreta>
+        <explicacao>A subdivisão -03 refere-se a obras de referência.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 780.09.</enunciado>
+        <respostaCorreta>História da Música.</respostaCorreta>
+        <explicacao>A subdivisão -09 representa história e crítica.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 025.170285.</enunciado>
+        <respostaCorreta>Automação de catalogação em Biblioteconomia.</respostaCorreta>
+        <explicacao>A notação sintetiza catalogação e aplicações computacionais.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 340.07.</enunciado>
+        <respostaCorreta>Educação, pesquisa e assuntos relacionados ao Direito.</respostaCorreta>
+        <explicacao>A subdivisão -07 refere-se a educação e pesquisa.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="dissertativa" dificuldade="facil">
+        <enunciado>Descreva o assunto representado pela notação 510.9.</enunciado>
+        <respostaCorreta>História da Matemática.</respostaCorreta>
+        <explicacao>A subdivisão -09 representa tratamento histórico.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 658.05.</enunciado>
+        <respostaCorreta>Periódicos de Administração.</respostaCorreta>
+        <explicacao>A subdivisão -05 representa publicações seriadas.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 370.102.</enunciado>
+        <respostaCorreta>Miscelânea e aspectos teóricos da Educação.</respostaCorreta>
+        <explicacao>A notação utiliza síntese com subdivisões padrão.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o assunto representado pela notação 610.072.</enunciado>
+        <respostaCorreta>Pesquisa e ensino em Medicina.</respostaCorreta>
+        <explicacao>A subdivisão -072 representa pesquisa.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Descreva o assunto representado pela notação 025.30285.</enunciado>
+        <respostaCorreta>Catalogação automatizada em Biblioteconomia.</respostaCorreta>
+        <explicacao>A notação combina catalogação com aplicações computacionais.</explicacao>
+    </questao>
+
+</quiz>

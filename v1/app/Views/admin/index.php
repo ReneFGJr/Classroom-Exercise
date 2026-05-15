@@ -11,7 +11,7 @@
             <a href="/admin/avaliations/new" class="btn btn-success btn-sm" title="Nova avaliacao" aria-label="Nova avaliacao">
                 <i class="bi bi-plus-lg"></i>
             </a>
-            <a href="/admin/importar-cdd-xml" class="btn btn-outline-primary btn-sm" title="Importar XML" aria-label="Importar XML">
+            <a href="/admin/importar-xml" class="btn btn-outline-primary btn-sm" title="Importar XML" aria-label="Importar XML">
                 <i class="bi bi-filetype-xml"></i>
             </a>
             <a href="/admin/inport/users" class="btn btn-primary btn-sm" title="Importar usuarios" aria-label="Importar usuarios">

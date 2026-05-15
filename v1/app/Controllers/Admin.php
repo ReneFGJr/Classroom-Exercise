@@ -8,11 +8,35 @@ use Throwable;
 
 class Admin extends BaseController
 {
+    private function usuarioEhAdmin(): bool
+    {
+        return (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
+    }
+
+    public function initController($request, $response, $logger)
+    {
+        parent::initController($request, $response, $logger);
+
+        // Restrict access to admin-only pages
+        if (! $this->usuarioEhAdmin()) {
+            throw new \RuntimeException('Acesso negado.');
+        }
+    }
+
+    private function verificarAcessoAdmin(): void
+    {
+        if (! $this->usuarioEhAdmin()) {
+            throw new \RuntimeException('Acesso negado.');
+        }
+    }
+
     /**
      * Exibe painel administrativo com as avaliacoes disponiveis.
      */
     public function index(): string
     {
+        $this->verificarAcessoAdmin();
+
         $db = db_connect();
         $avaliacoes = [];
         $mensagemAviso = null;
@@ -406,34 +430,106 @@ class Admin extends BaseController
     }
 
     /**
-     * Importa o arquivo cdd.xml para as tabelas MySQL.
+     * Exibe a tela de importacao de XML com confirmacao.
      */
-    public function importarCddXml(): ResponseInterface
+    public function importarXml(): string|ResponseInterface
     {
-        $xmlPath = ROOTPATH . '../_docs/questions/cdd.xml';
+        $directoryPath = ROOTPATH . '../_docs/questions/';
 
-        if (! is_file($xmlPath)) {
-            return $this->response
-                ->setStatusCode(404)
-                ->setJSON([
-                    'status'  => 'erro',
-                    'mensagem' => 'Arquivo XML nao encontrado.',
-                    'caminho' => $xmlPath,
-                ]);
+        if (! is_dir($directoryPath)) {
+            return redirect()->to('/admin')->with('erro', 'Diretorio de importacao nao encontrado: ' . $directoryPath);
         }
 
-        if (! is_readable($xmlPath)) {
-            return $this->response
-                ->setStatusCode(403)
-                ->setJSON([
-                    'status'  => 'erro',
-                    'mensagem' => 'Arquivo XML sem permissao de leitura.',
-                    'caminho' => $xmlPath,
-                ]);
+        $entries = array_values(array_diff(scandir($directoryPath), ['.', '..']));
+        $arquivos = [];
+
+        foreach ($entries as $entry) {
+            $filePath = $directoryPath . DIRECTORY_SEPARATOR . $entry;
+
+            if (! is_file($filePath)) {
+                continue;
+            }
+
+            $extensao = strtolower(pathinfo($entry, PATHINFO_EXTENSION));
+
+            if ($extensao !== 'xml') {
+                continue;
+            }
+
+            $arquivos[] = [
+                'nome' => $entry,
+                'tamanho_kb' => round(((int) filesize($filePath)) / 1024, 2),
+                'modificado_em' => date('d/m/Y H:i', (int) filemtime($filePath)),
+            ];
         }
 
+        usort($arquivos, static fn ($a, $b) => strcmp((string) $a['nome'], (string) $b['nome']));
+
+        return view('admin/importar_xml', [
+            'title' => 'Importar XML',
+            'pasta_origem' => '_docs/questions',
+            'arquivos' => $arquivos,
+            'resultado_importacao' => session('resultado_importacao'),
+        ]);
+    }
+
+    /**
+     * Executa a importacao dos arquivos XML apos confirmacao do usuario.
+     */
+    public function confirmarImportacaoXml(): ResponseInterface
+    {
+        $directoryPath = ROOTPATH . '../_docs/questions/';
+
+        if (! is_dir($directoryPath)) {
+            return redirect()->to('/admin/importar-xml')->with('erro', 'Diretorio de importacao nao encontrado.');
+        }
+
+        $entries = array_values(array_diff(scandir($directoryPath), ['.', '..']));
+        $processedFiles = [];
+        $errors = [];
+
+        foreach ($entries as $entry) {
+            $filePath = $directoryPath . DIRECTORY_SEPARATOR . $entry;
+
+            if (! is_file($filePath)) {
+                continue;
+            }
+
+            if (strtolower(pathinfo($entry, PATHINFO_EXTENSION)) !== 'xml') {
+                continue;
+            }
+
+            try {
+                $this->processarXml($filePath);
+                $processedFiles[] = $entry;
+            } catch (Throwable $e) {
+                $errors[] = [
+                    'arquivo' => $entry,
+                    'erro' => $e->getMessage(),
+                ];
+            }
+        }
+
+        $resultado = [
+            'total_processados' => count($processedFiles),
+            'total_erros' => count($errors),
+            'arquivos_processados' => $processedFiles,
+            'erros' => $errors,
+        ];
+
+        if ($resultado['total_processados'] === 0 && $resultado['total_erros'] === 0) {
+            return redirect()->to('/admin/importar-xml')->with('erro', 'Nenhum arquivo XML encontrado para importar.');
+        }
+
+        return redirect()->to('/admin/importar-xml')
+            ->with('sucesso', 'Importacao finalizada.')
+            ->with('resultado_importacao', $resultado);
+    }
+
+    private function processarXml(string $filePath): void
+    {
         libxml_use_internal_errors(true);
-        $xml = simplexml_load_file($xmlPath, SimpleXMLElement::class, LIBXML_NONET | LIBXML_NOBLANKS);
+        $xml = simplexml_load_file($filePath, SimpleXMLElement::class, LIBXML_NONET | LIBXML_NOBLANKS);
 
         if ($xml === false) {
             $errors = array_map(
@@ -442,157 +538,76 @@ class Admin extends BaseController
             );
             libxml_clear_errors();
 
-            return $this->response
-                ->setStatusCode(422)
-                ->setJSON([
-                    'status'  => 'erro',
-                    'mensagem' => 'Falha ao interpretar o XML.',
-                    'erros'   => $errors,
-                ]);
+            throw new  \RuntimeException('Falha ao interpretar o XML: ' . implode('; ', $errors));
         }
 
         $db = db_connect();
 
-        $tabelasObrigatorias = ['questions', 'tipos_resposta'];
-        $tabelasAusentes = [];
-
-        foreach ($tabelasObrigatorias as $tabela) {
-            if (! $db->tableExists($tabela)) {
-                $tabelasAusentes[] = $tabela;
+        foreach (['questions', 'tipos_resposta', 'grupo_questoes'] as $tableName) {
+            if (! $db->tableExists($tableName)) {
+                throw new \RuntimeException('Tabela obrigatoria nao encontrada: ' . $tableName);
             }
         }
 
-        if ($tabelasAusentes !== []) {
-            return $this->response
-                ->setStatusCode(500)
-                ->setJSON([
-                    'status' => 'erro',
-                    'mensagem' => 'Tabelas obrigatorias para importacao nao foram encontradas.',
-                    'tabelas_ausentes' => $tabelasAusentes,
-                    'acao_recomendada' => 'Execute as migrations pendentes (php spark migrate).',
-                ]);
+        $disciplina = trim((string) ($xml['disciplina'] ?? ''));
+        if ($disciplina === '') {
+            $disciplina = pathinfo($filePath, PATHINFO_FILENAME);
         }
 
-        $disciplina = trim((string) ($xml['disciplina'] ?? 'Sem disciplina'));
-        $nomeAtividade = 'Importacao CDD - ' . $disciplina;
         $grupoAvaliacaoId = null;
-        $grupoQuestoesId = null;
-        $definicaoAtividadeId = null;
-        $questoesNovas = 0;
-        $questoesExistentes = 0;
-        $avisos = [];
-
-        try {
-            $db->transException(true)->transStart();
-
-            $temGrupoAvaliacao = $db->tableExists('grupo_avaliacao');
-            $temGrupoQuestoes = $db->tableExists('grupo_questoes');
-            $temDefinicaoAtividade = $db->tableExists('definicao_atividade');
-
-            if ($temGrupoAvaliacao) {
-                $grupoAvaliacaoId = $this->upsertGrupoAvaliacao($db, $disciplina);
-            } else {
-                $avisos[] = 'Tabela grupo_avaliacao nao encontrada. Vinculo de avaliacao foi ignorado.';
-            }
-
-            $idsQuestoes = [];
-            $tiposCache = [];
-
-            foreach ($xml->questao as $questaoXml) {
-                $tipoSlug = trim((string) ($questaoXml['tipo'] ?? 'resposta_curta'));
-                $tipoId = $this->getOrCreateTipoResposta($db, $tipoSlug, $tiposCache);
-
-                $enunciado = trim((string) ($questaoXml->enunciado ?? ''));
-                $respostaCorreta = trim((string) ($questaoXml->respostaCorreta ?? ''));
-                $explicacao = trim((string) ($questaoXml->explicacao ?? ''));
-                $dificuldade = $this->mapearDificuldade((string) ($questaoXml['dificuldade'] ?? 'media'));
-
-                [$r1, $r2, $r3, $r4, $r5] = $this->extrairAlternativas($questaoXml);
-
-                $questionData = [
-                    'enunciado_questao' => $enunciado,
-                    'tipo_resposta_id' => $tipoId,
-                    'resposta_correta' => $respostaCorreta !== '' ? $respostaCorreta : null,
-                    'justificativa_resposta' => $explicacao !== '' ? $explicacao : null,
-                    'resposta_1' => $r1,
-                    'resposta_2' => $r2,
-                    'resposta_3' => $r3,
-                    'resposta_4' => $r4,
-                    'resposta_5' => $r5,
-                    'nivel_dificuldade' => $dificuldade,
-                    'created_at' => date('Y-m-d H:i:s'),
-                    'updated_at' => date('Y-m-d H:i:s'),
-                ];
-
-                [$questionId, $foiInserida] = $this->upsertQuestion($db, $questionData);
-                $idsQuestoes[] = $questionId;
-
-                if ($foiInserida) {
-                    $questoesNovas++;
-                } else {
-                    $questoesExistentes++;
-                }
-            }
-
-            if ($temGrupoQuestoes) {
-                $grupoQuestoesId = $this->upsertGrupoQuestoes(
-                    $db,
-                    $nomeAtividade,
-                    array_values(array_unique($idsQuestoes)),
-                    $grupoAvaliacaoId,
-                );
-            } else {
-                $avisos[] = 'Tabela grupo_questoes nao encontrada. Grupo de questoes nao foi gravado.';
-            }
-
-            if ($temDefinicaoAtividade && $grupoAvaliacaoId !== null && $grupoQuestoesId !== null) {
-                $definicaoAtividadeId = $this->upsertDefinicaoAtividade(
-                    $db,
-                    $nomeAtividade,
-                    $grupoAvaliacaoId,
-                    $grupoQuestoesId,
-                );
-            } elseif (! $temDefinicaoAtividade) {
-                $avisos[] = 'Tabela definicao_atividade nao encontrada. Definicao da atividade foi ignorada.';
-            }
-
-            $db->transComplete();
-
-            if ($db->transStatus() === false) {
-                return $this->response
-                    ->setStatusCode(500)
-                    ->setJSON([
-                        'status' => 'erro',
-                        'mensagem' => 'Falha ao salvar os dados da importacao.',
-                    ]);
-            }
-        } catch (Throwable $e) {
-            if ($db->transStatus() !== false) {
-                $db->transRollback();
-            }
-
-            return $this->response
-                ->setStatusCode(500)
-                ->setJSON([
-                    'status' => 'erro',
-                    'mensagem' => 'Erro ao importar XML para o banco.',
-                    'detalhe' => $e->getMessage(),
-                ]);
+        if ($db->tableExists('grupo_avaliacao')) {
+            $grupoAvaliacaoId = $this->upsertGrupoAvaliacao($db, $disciplina);
         }
 
-        return $this->response->setJSON([
-            'status'  => 'ok',
-            'mensagem' => 'XML importado e persistido com sucesso.',
-            'arquivo' => $xmlPath,
-            'disciplina' => $disciplina,
-            'questoes_importadas' => count(array_unique($idsQuestoes)),
-            'questoes_novas' => $questoesNovas,
-            'questoes_ja_existentes' => $questoesExistentes,
-            'grupo_avaliacao_id' => $grupoAvaliacaoId,
-            'grupo_questoes_id' => $grupoQuestoesId,
-            'definicao_atividade_id' => $definicaoAtividadeId,
-            'avisos' => $avisos,
-        ]);
+        $tipoCache = [];
+        $idsQuestoes = [];
+
+        $questoesXml = $xml->questao ?? [];
+
+        foreach ($questoesXml as $questaoXml) {
+            $enunciado = trim((string) ($questaoXml->enunciado ?? ''));
+            if ($enunciado === '') {
+                continue;
+            }
+
+            $tipoSlug = trim((string) ($questaoXml['tipo'] ?? ''));
+            if ($tipoSlug === '') {
+                $tipoSlug = 'multipla_escolha';
+            }
+
+            $tipoRespostaId = $this->getOrCreateTipoResposta($db, $tipoSlug, $tipoCache);
+            $dificuldade = $this->mapearDificuldade((string) ($questaoXml['dificuldade'] ?? ''));
+            [$r1, $r2, $r3, $r4, $r5] = $this->extrairAlternativas($questaoXml);
+
+            [$questionId] = $this->upsertQuestion($db, [
+                'enunciado_questao' => $enunciado,
+                'tipo_resposta_id' => $tipoRespostaId,
+                'resposta_correta' => trim((string) ($questaoXml->respostaCorreta ?? '')) ?: null,
+                'justificativa_resposta' => trim((string) ($questaoXml->explicacao ?? '')) ?: null,
+                'resposta_1' => $r1,
+                'resposta_2' => $r2,
+                'resposta_3' => $r3,
+                'resposta_4' => $r4,
+                'resposta_5' => $r5,
+                'nivel_dificuldade' => $dificuldade,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
+
+            $idsQuestoes[] = $questionId;
+        }
+
+        $idsQuestoes = array_values(array_unique(array_map('intval', $idsQuestoes)));
+
+        if ($idsQuestoes === []) {
+            throw new \RuntimeException('Nenhuma questao valida encontrada no XML.');
+        }
+
+        $nomeArquivo = pathinfo($filePath, PATHINFO_FILENAME);
+        $nomeGrupo = 'xml_' . strtolower(preg_replace('/[^a-zA-Z0-9_\-]+/', '_', $nomeArquivo) ?? $nomeArquivo);
+        $nomeGrupo = substr($nomeGrupo, 0, 150);
+
+        $this->upsertGrupoQuestoes($db, $nomeGrupo, $idsQuestoes, $grupoAvaliacaoId);
     }
 
     private function normalizarCabecalho(string $coluna): string

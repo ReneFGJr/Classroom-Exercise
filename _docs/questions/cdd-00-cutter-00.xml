@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz disciplina="Notação de Autor Cutter" totalQuestoes="50">
+
+    <questao id="1" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual é a principal função da notação de autor Cutter?</enunciado>
+        <alternativas>
+            <alternativa id="A">Representar o assunto do livro</alternativa>
+            <alternativa id="B">Indicar o idioma da obra</alternativa>
+            <alternativa id="C">Organizar autores alfabeticamente</alternativa>
+            <alternativa id="D">Definir o tamanho do livro</alternativa>
+        </alternativas>
+        <respostaCorreta>C</respostaCorreta>
+        <explicacao>A notação Cutter é utilizada para ordenar autores alfabeticamente nas estantes.</explicacao>
+    </questao>
+
+    <questao id="2" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A tabela Cutter utiliza letras e números para representar autores.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A notação combina uma letra inicial e números.</explicacao>
+    </questao>
+
+    <questao id="3" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual notação Cutter é mais adequada para o autor Paulo Coelho?</enunciado>
+        <alternativas>
+            <alternativa id="A">C672</alternativa>
+            <alternativa id="B">P324</alternativa>
+            <alternativa id="C">A432</alternativa>
+            <alternativa id="D">M188</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A letra inicial corresponde ao sobrenome principal do autor.</explicacao>
+    </questao>
+
+    <questao id="4" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Na notação Cutter de Machado de Assis, qual letra deve iniciar a notação?</enunciado>
+        <alternativas>
+            <alternativa id="A">A</alternativa>
+            <alternativa id="B">M</alternativa>
+            <alternativa id="C">D</alternativa>
+            <alternativa id="D">C</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>O sobrenome principal é Machado.</explicacao>
+    </questao>
+
+    <questao id="5" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual autor estrangeiro poderia receber a notação T139?</enunciado>
+        <alternativas>
+            <alternativa id="A">Tolstói</alternativa>
+            <alternativa id="B">Kafka</alternativa>
+            <alternativa id="C">Shakespeare</alternativa>
+            <alternativa id="D">Joyce</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A notação inicia com T, referente ao sobrenome Tolstói.</explicacao>
+    </questao>
+
+    <questao id="6" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A notação Cutter ajuda a diferenciar obras de autores com sobrenomes semelhantes.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A tabela Cutter permite ordenação precisa nas estantes.</explicacao>
+    </questao>
+
+    <questao id="7" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual sobrenome corresponde melhor à notação S586?</enunciado>
+        <alternativas>
+            <alternativa id="A">Silva</alternativa>
+            <alternativa id="B">Rocha</alternativa>
+            <alternativa id="C">Oliveira</alternativa>
+            <alternativa id="D">Costa</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A letra S indica sobrenomes iniciados por S.</explicacao>
+    </questao>
+
+    <questao id="8" tipo="multipla_resposta" dificuldade="media">
+        <enunciado>Quais autores brasileiros poderiam utilizar notação iniciada por A?</enunciado>
+        <alternativas>
+            <alternativa id="A">Alencar</alternativa>
+            <alternativa id="B">Amado</alternativa>
+            <alternativa id="C">Verissimo</alternativa>
+            <alternativa id="D">Andrade</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>Os sobrenomes iniciam com a letra A.</explicacao>
+    </questao>
+
+    <questao id="9" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual notação Cutter seria mais adequada para Clarice Lispector?</enunciado>
+        <alternativas>
+            <alternativa id="A">L769</alternativa>
+            <alternativa id="B">C598</alternativa>
+            <alternativa id="C">P432</alternativa>
+            <alternativa id="D">R882</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>O sobrenome principal é Lispector.</explicacao>
+    </questao>
+
+    <questao id="10" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A tabela Cutter substitui a classificação decimal.</enunciado>
+        <respostaCorreta>Falso</respostaCorreta>
+        <explicacao>A Cutter complementa a classificação temática.</explicacao>
+    </questao>
+
+    <questao id="11" tipo="dissertativa" dificuldade="media">
+        <enunciado>Explique a função da notação Cutter na organização de bibliotecas.</enunciado>
+        <respostaCorreta>A notação Cutter permite organizar obras alfabeticamente pelo sobrenome do autor, facilitando localização e ordenação.</respostaCorreta>
+        <explicacao>A Cutter complementa sistemas classificatórios como CDD e CDU.</explicacao>
+    </questao>
+
+    <questao id="12" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual autor corresponde melhor à notação H438?</enunciado>
+        <alternativas>
+            <alternativa id="A">Hemingway</alternativa>
+            <alternativa id="B">Kafka</alternativa>
+            <alternativa id="C">Eco</alternativa>
+            <alternativa id="D">Camus</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A letra H representa Hemingway.</explicacao>
+    </questao>
+
+    <questao id="13" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual sobrenome brasileiro poderia receber a notação R672?</enunciado>
+        <alternativas>
+            <alternativa id="A">Ribeiro</alternativa>
+            <alternativa id="B">Costa</alternativa>
+            <alternativa id="C">Ferreira</alternativa>
+            <alternativa id="D">Nunes</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A letra inicial R corresponde ao sobrenome Ribeiro.</explicacao>
+    </questao>
+
+    <questao id="14" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A notação Cutter pode ser usada junto da CDU.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A Cutter pode complementar diferentes sistemas classificatórios.</explicacao>
+    </questao>
+
+    <questao id="15" tipo="multipla_resposta" dificuldade="media">
+        <enunciado>Quais autores são estrangeiros?</enunciado>
+        <alternativas>
+            <alternativa id="A">Dostoiévski</alternativa>
+            <alternativa id="B">José de Alencar</alternativa>
+            <alternativa id="C">Virginia Woolf</alternativa>
+            <alternativa id="D">Monteiro Lobato</alternativa>
+        </alternativas>
+        <respostaCorreta>A,C</respostaCorreta>
+        <explicacao>Dostoiévski e Virginia Woolf são autores estrangeiros.</explicacao>
+    </questao>
+
+    <questao id="16" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Qual letra inicia a notação Cutter de Jorge Amado?</enunciado>
+        <alternativas>
+            <alternativa id="A">J</alternativa>
+            <alternativa id="B">A</alternativa>
+            <alternativa id="C">M</alternativa>
+            <alternativa id="D">C</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>O sobrenome principal é Amado.</explicacao>
+    </questao>
+
+    <questao id="17" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva como a tabela Cutter contribui para a recuperação da informação.</enunciado>
+        <respostaCorreta>A Cutter permite localizar rapidamente obras de um mesmo autor ou autores próximos alfabeticamente.</respostaCorreta>
+        <explicacao>A organização física e lógica é facilitada.</explicacao>
+    </questao>
+
+    <questao id="18" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A notação Cutter utiliza o sobrenome do autor como base principal.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>O sobrenome principal orienta a construção da notação.</explicacao>
+    </questao>
+
+    <questao id="19" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual autor poderia receber a notação C287?</enunciado>
+        <alternativas>
+            <alternativa id="A">Camões</alternativa>
+            <alternativa id="B">Verne</alternativa>
+            <alternativa id="C">Orwell</alternativa>
+            <alternativa id="D">Poe</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A notação inicia pela letra C.</explicacao>
+    </questao>
+
+    <questao id="20" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual opção representa corretamente uma notação Cutter?</enunciado>
+        <alternativas>
+            <alternativa id="A">869.3</alternativa>
+            <alternativa id="B">A532</alternativa>
+            <alternativa id="C">BR2025</alternativa>
+            <alternativa id="D">001.4</alternativa>
+        </alternativas>
+        <respostaCorreta>B</respostaCorreta>
+        <explicacao>A notação Cutter combina letra e números.</explicacao>
+    </questao>
+
+    <questao id="21" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A notação Cutter pode incluir elementos da obra além do autor.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>Algumas bibliotecas incluem marcações adicionais de título ou edição.</explicacao>
+    </questao>
+
+    <questao id="22" tipo="dissertativa" dificuldade="media">
+        <enunciado>Explique a diferença entre classificação temática e notação Cutter.</enunciado>
+        <respostaCorreta>A classificação temática representa o assunto; a Cutter representa o autor para ordenação alfabética.</respostaCorreta>
+        <explicacao>Os dois elementos trabalham de forma complementar.</explicacao>
+    </questao>
+
+    <questao id="23" tipo="multipla_resposta" dificuldade="media">
+        <enunciado>Quais sobrenomes poderiam iniciar com a letra M na Cutter?</enunciado>
+        <alternativas>
+            <alternativa id="A">Machado</alternativa>
+            <alternativa id="B">Meireles</alternativa>
+            <alternativa id="C">Moraes</alternativa>
+            <alternativa id="D">Silveira</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,C</respostaCorreta>
+        <explicacao>Todos os sobrenomes listados iniciam com M.</explicacao>
+    </questao>
+
+    <questao id="24" tipo="multipla_escolha" dificuldade="facil">
+        <enunciado>Quem criou a tabela Cutter?</enunciado>
+        <alternativas>
+            <alternativa id="A">Charles Cutter</alternativa>
+            <alternativa id="B">Melvil Dewey</alternativa>
+            <alternativa id="C">Otlet</alternativa>
+            <alternativa id="D">Ranganathan</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>Charles Ammi Cutter desenvolveu a tabela Cutter.</explicacao>
+    </questao>
+
+    <questao id="25" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A Cutter é usada em bibliotecas universitárias e públicas.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>A notação é amplamente utilizada em diferentes tipos de bibliotecas.</explicacao>
+    </questao>
+
+    <questao id="26" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual notação seria mais adequada para Gabriel García Márquez?</enunciado>
+        <alternativas>
+            <alternativa id="A">M357</alternativa>
+            <alternativa id="B">G118</alternativa>
+            <alternativa id="C">C882</alternativa>
+            <alternativa id="D">A902</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>O sobrenome principal utilizado é Márquez.</explicacao>
+    </questao>
+
+    <questao id="27" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual autor brasileiro poderia receber a notação V532?</enunciado>
+        <alternativas>
+            <alternativa id="A">Verissimo</alternativa>
+            <alternativa id="B">Freyre</alternativa>
+            <alternativa id="C">Lobato</alternativa>
+            <alternativa id="D">Drummond</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A letra V indica Verissimo.</explicacao>
+    </questao>
+
+    <questao id="28" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva a importância da padronização na notação Cutter.</enunciado>
+        <respostaCorreta>A padronização garante consistência na organização e recuperação das obras nas bibliotecas.</respostaCorreta>
+        <explicacao>A uniformidade facilita localização e intercâmbio bibliográfico.</explicacao>
+    </questao>
+
+    <questao id="29" tipo="verdadeiro_falso" dificuldade="dificil">
+        <enunciado>A notação Cutter é um sistema exclusivamente numérico.</enunciado>
+        <respostaCorreta>Falso</respostaCorreta>
+        <explicacao>A Cutter utiliza letras e números.</explicacao>
+    </questao>
+
+    <questao id="30" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual autor corresponde melhor à notação O793?</enunciado>
+        <alternativas>
+            <alternativa id="A">Orwell</alternativa>
+            <alternativa id="B">Eco</alternativa>
+            <alternativa id="C">Pessoa</alternativa>
+            <alternativa id="D">Austen</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A letra O representa Orwell.</explicacao>
+    </questao>
+
+    <questao id="31" tipo="multipla_resposta" dificuldade="dificil">
+        <enunciado>Quais características pertencem à notação Cutter?</enunciado>
+        <alternativas>
+            <alternativa id="A">Ordenação alfabética</alternativa>
+            <alternativa id="B">Representação de autoria</alternativa>
+            <alternativa id="C">Representação temática principal</alternativa>
+            <alternativa id="D">Complemento da classificação</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,D</respostaCorreta>
+        <explicacao>A Cutter complementa a classificação temática.</explicacao>
+    </questao>
+
+    <questao id="32" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A Cutter pode ser utilizada em catálogos digitais.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>Ela continua importante em ambientes digitais e físicos.</explicacao>
+    </questao>
+
+    <questao id="33" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual notação poderia representar o autor Umberto Eco?</enunciado>
+        <alternativas>
+            <alternativa id="A">E198</alternativa>
+            <alternativa id="B">U764</alternativa>
+            <alternativa id="C">C552</alternativa>
+            <alternativa id="D">K229</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>O sobrenome principal é Eco.</explicacao>
+    </questao>
+
+    <questao id="34" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Explique como a notação Cutter auxilia no arranjo físico das estantes.</enunciado>
+        <respostaCorreta>A Cutter organiza obras alfabeticamente por autor, permitindo disposição lógica e localização eficiente nas estantes.</respostaCorreta>
+        <explicacao>A ordenação física melhora acesso e recuperação.</explicacao>
+    </questao>
+
+    <questao id="35" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual autor poderia receber a notação D724?</enunciado>
+        <alternativas>
+            <alternativa id="A">Drummond</alternativa>
+            <alternativa id="B">Lobato</alternativa>
+            <alternativa id="C">Rosa</alternativa>
+            <alternativa id="D">Conrad</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>A letra D representa Drummond.</explicacao>
+    </questao>
+
+    <questao id="36" tipo="verdadeiro_falso" dificuldade="media">
+        <enunciado>A Cutter é importante para diferenciar autores com o mesmo sobrenome.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>Os números ajudam a distinguir autores semelhantes.</explicacao>
+    </questao>
+
+    <questao id="37" tipo="multipla_escolha" dificuldade="media">
+        <enunciado>Qual notação seria mais adequada para Fernando Pessoa?</enunciado>
+        <alternativas>
+            <alternativa id="A">P475</alternativa>
+            <alternativa id="B">F372</alternativa>
+            <alternativa id="C">S289</alternativa>
+            <alternativa id="D">R883</alternativa>
+        </alternativas>
+        <respostaCorreta>A</respostaCorreta>
+        <explicacao>O sobrenome principal é Pessoa.</explicacao>
+    </questao>
+
+    <questao id="38" tipo="multipla_resposta" dificuldade="dificil">
+        <enunciado>Quais elementos podem compor uma chamada bibliográfica?</enunciado>
+        <alternativas>
+            <alternativa id="A">Número de classificação</alternativa>
+            <alternativa id="B">Notação Cutter</alternativa>
+            <alternativa id="C">Ano de publicação</alternativa>
+            <alternativa id="D">Código de barras</alternativa>
+        </alternativas>
+        <respostaCorreta>A,B,C</respostaCorreta>
+        <explicacao>A chamada bibliográfica normalmente reúne classificação, Cutter e ano.</explicacao>
+    </questao>
+
+    <questao id="39" tipo="dissertativa" dificuldade="media">
+        <enunciado>Descreva o papel da Cutter na individualização das obras.</enunciado>
+        <respostaCorreta>A Cutter diferencia autores e obras semelhantes dentro de uma mesma classe temática.</respostaCorreta>
+        <explicacao>Ela evita ambiguidades na organização bibliográfica.</explicacao>
+    </questao>
+
+    <questao id="40" tipo="verdadeiro_falso" dificuldade="facil">
+        <enunciado>A Cutter pode variar ligeiramente entre bibliotecas.</enunciado>
+        <respostaCorreta>Verdadeiro</respostaCorreta>
+        <explicacao>Instituições podem adaptar regras locais.</explicacao>
+    </questao>
+
+    <questao id="41" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor José Saramago.</enunciado>
+        <respostaCorreta>S243</respostaCorreta>
+        <explicacao>A notação deve iniciar pela letra do sobrenome Saramago.</explicacao>
+    </questao>
+
+    <questao id="42" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Guimarães Rosa.</enunciado>
+        <respostaCorreta>R788</respostaCorreta>
+        <explicacao>O sobrenome principal considerado é Rosa.</explicacao>
+    </questao>
+
+    <questao id="43" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Franz Kafka.</enunciado>
+        <respostaCorreta>K111</respostaCorreta>
+        <explicacao>A letra K corresponde ao sobrenome Kafka.</explicacao>
+    </questao>
+
+    <questao id="44" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Cecília Meireles.</enunciado>
+        <respostaCorreta>M514</respostaCorreta>
+        <explicacao>O sobrenome principal utilizado é Meireles.</explicacao>
+    </questao>
+
+    <questao id="45" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor George Orwell.</enunciado>
+        <respostaCorreta>O793</respostaCorreta>
+        <explicacao>A notação inicia com O de Orwell.</explicacao>
+    </questao>
+
+    <questao id="46" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Rubem Fonseca.</enunciado>
+        <respostaCorreta>F676</respostaCorreta>
+        <explicacao>O sobrenome principal considerado é Fonseca.</explicacao>
+    </questao>
+
+    <questao id="47" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Virgínia Woolf.</enunciado>
+        <respostaCorreta>W913</respostaCorreta>
+        <explicacao>O sobrenome principal utilizado é Woolf.</explicacao>
+    </questao>
+
+    <questao id="48" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Monteiro Lobato.</enunciado>
+        <respostaCorreta>L796</respostaCorreta>
+        <explicacao>O sobrenome principal considerado é Lobato.</explicacao>
+    </questao>
+
+    <questao id="49" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Edgar Allan Poe.</enunciado>
+        <respostaCorreta>P743</respostaCorreta>
+        <explicacao>O sobrenome principal utilizado é Poe.</explicacao>
+    </questao>
+
+    <questao id="50" tipo="dissertativa" dificuldade="dificil">
+        <enunciado>Informe uma possível notação Cutter para o autor Jorge Luis Borges.</enunciado>
+        <respostaCorreta>B732</respostaCorreta>
+        <explicacao>O sobrenome principal considerado é Borges.</explicacao>
+    </questao>
+
+</quiz>
