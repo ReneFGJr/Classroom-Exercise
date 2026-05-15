@@ -6,7 +6,7 @@
         <h1 class="h3 mb-1"><?= esc((string) ($titulo_form ?? 'Formulario de avaliacao')) ?></h1>
         <p class="text-secondary mb-0">Preencha os dados da avaliacao.</p>
     </div>
-    <a href="/admin/avaliations" class="btn btn-outline-secondary btn-sm" title="Voltar" aria-label="Voltar">
+    <a href="<?=base_url();?>//admin/avaliations" class="btn btn-outline-secondary btn-sm" title="Voltar" aria-label="Voltar">
         <i class="bi bi-arrow-left"></i>
     </a>
 </section>
@@ -93,7 +93,7 @@
                 <button type="submit" class="btn btn-primary" title="Salvar avaliacao" aria-label="Salvar avaliacao">
                     <i class="bi bi-check2-circle"></i>
                 </button>
-                <a href="/admin/avaliations" class="btn btn-light border" title="Cancelar" aria-label="Cancelar">
+                <a href="<?=base_url();?>//admin/avaliations" class="btn btn-light border" title="Cancelar" aria-label="Cancelar">
                     <i class="bi bi-x-circle"></i>
                 </a>
             </div>

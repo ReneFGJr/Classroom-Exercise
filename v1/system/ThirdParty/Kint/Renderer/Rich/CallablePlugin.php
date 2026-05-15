@@ -63,7 +63,7 @@ class CallablePlugin extends AbstractPlugin implements ValuePluginInterface
             $function = $this->renderer->escape($v->getDisplayName());
 
             if (null !== ($url = $v->getPhpDocUrl())) {
-                $function = '<a href="'.$url.'" target=_blank>'.$function.'</a>';
+                $function = '<a href="<?=base_url();?>/'.$url.'" target=_blank>'.$function.'</a>';
             }
 
             $header .= '<dfn>'.$function.'</dfn>';

@@ -489,7 +489,7 @@ class RichRenderer extends AbstractRenderer
             return $path;
         }
 
-        return '<a href="'.$this->escape($ideLink).'">'.$path.'</a>';
+        return '<a href="<?=base_url();?>/'.$this->escape($ideLink).'">'.$path.'</a>';
     }
 
     protected function calledFrom(): string

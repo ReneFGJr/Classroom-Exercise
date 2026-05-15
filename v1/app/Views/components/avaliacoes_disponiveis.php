@@ -28,14 +28,14 @@
                             <tr>
                                 <td><?= $idAvaliacao ?></td>
                                 <td>
-                                    <a href="/atividade/<?= $idAvaliacao ?>" class="text-decoration-none fw-semibold">
+                                    <a href="<?=base_url();?>//atividade/<?= $idAvaliacao ?>" class="text-decoration-none fw-semibold">
                                         <?= esc((string) ($avaliacao['nome_disciplina'] ?? 'Sem nome')) ?>
                                     </a>
                                 </td>
                                 <td><?= esc((string) ($avaliacao['created_at'] ?? '-')) ?></td>
                                 <td>
                                     <div class="d-flex gap-2">
-                                        <a href="/admin/avaliations/<?= $idAvaliacao ?>/edit" class="btn btn-outline-secondary btn-sm" title="Editar avaliacao" aria-label="Editar avaliacao">
+                                        <a href="<?=base_url();?>//admin/avaliations/<?= $idAvaliacao ?>/edit" class="btn btn-outline-secondary btn-sm" title="Editar avaliacao" aria-label="Editar avaliacao">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
                                         <form method="post" action="/admin/avaliations/<?= $idAvaliacao ?>/delete" onsubmit="return confirm('Deseja excluir esta avaliacao?');">

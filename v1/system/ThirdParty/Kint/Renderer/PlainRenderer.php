@@ -181,7 +181,7 @@ class PlainRenderer extends TextRenderer
             return $path;
         }
 
-        return '<a href="'.$this->escape($ideLink).'">'.$path.'</a>';
+        return '<a href="<?=base_url();?>/'.$this->escape($ideLink).'">'.$path.'</a>';
     }
 
     public function escape(string $string, $encoding = false): string

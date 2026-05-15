@@ -33,7 +33,7 @@ $errorId = uniqid('error', true);
             <h1><?= esc($title), esc($exception->getCode() ? ' #' . $exception->getCode() : '') ?></h1>
             <p>
                 <?= nl2br(esc($exception->getMessage())) ?>
-                <a href="https://www.duckduckgo.com/?q=<?= urlencode($title . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $exception->getMessage())) ?>"
+                <a href="<?=base_url();?>/https://www.duckduckgo.com/?q=<?= urlencode($title . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $exception->getMessage())) ?>"
                    rel="noreferrer" target="_blank">search &rarr;</a>
             </p>
         </div>
@@ -63,7 +63,7 @@ $errorId = uniqid('error', true);
     <?= esc($prevException::class), esc($prevException->getCode() ? ' #' . $prevException->getCode() : '') ?>
 
     <?= nl2br(esc($prevException->getMessage())) ?>
-    <a href="https://www.duckduckgo.com/?q=<?= urlencode($prevException::class . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $prevException->getMessage())) ?>"
+    <a href="<?=base_url();?>/https://www.duckduckgo.com/?q=<?= urlencode($prevException::class . ' ' . preg_replace('#\'.*\'|".*"#Us', '', $prevException->getMessage())) ?>"
        rel="noreferrer" target="_blank">search &rarr;</a>
     <?= esc(clean_path($prevException->getFile()) . ':' . $prevException->getLine()) ?>
     </pre>
@@ -77,12 +77,12 @@ $errorId = uniqid('error', true);
     <div class="container">
 
         <ul class="tabs" id="tabs">
-            <li><a href="#backtrace">Backtrace</a></li>
-            <li><a href="#server">Server</a></li>
-            <li><a href="#request">Request</a></li>
-            <li><a href="#response">Response</a></li>
-            <li><a href="#files">Files</a></li>
-            <li><a href="#memory">Memory</a></li>
+            <li><a href="<?=base_url();?>/#backtrace">Backtrace</a></li>
+            <li><a href="<?=base_url();?>/#server">Server</a></li>
+            <li><a href="<?=base_url();?>/#request">Request</a></li>
+            <li><a href="<?=base_url();?>/#response">Response</a></li>
+            <li><a href="<?=base_url();?>/#files">Files</a></li>
+            <li><a href="<?=base_url();?>/#memory">Memory</a></li>
         </ul>
 
         <div class="tab-content">
@@ -113,7 +113,7 @@ $errorId = uniqid('error', true);
                                 &nbsp;&nbsp;&mdash;&nbsp;&nbsp;<?= esc($row['class'] . $row['type'] . $row['function']) ?>
                                 <?php if (! empty($row['args'])) : ?>
                                     <?php $argsId = $errorId . 'args' . $index ?>
-                                    ( <a href="#" onclick="return toggle('<?= esc($argsId, 'attr') ?>');">arguments</a> )
+                                    ( <a href="<?=base_url();?>/#" onclick="return toggle('<?= esc($argsId, 'attr') ?>');">arguments</a> )
                                     <div class="args" id="<?= esc($argsId, 'attr') ?>">
                                         <table cellspacing="0">
 

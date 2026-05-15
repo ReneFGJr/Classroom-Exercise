@@ -8,7 +8,7 @@
             <h1 class="h3 mb-1">Usuarios cadastrados</h1>
             <p class="text-secondary mb-0">Lista de usuarios disponiveis para acesso ao sistema.</p>
         </div>
-        <a href="/admin/inport/users" class="btn btn-primary btn-sm" title="Importar usuarios" aria-label="Importar usuarios">
+        <a href="<?=base_url();?>//admin/inport/users" class="btn btn-primary btn-sm" title="Importar usuarios" aria-label="Importar usuarios">
             <i class="bi bi-people-fill"></i>
             <span class="ms-1">Importar usuarios</span>
         </a>

@@ -2,7 +2,7 @@
     <?php $logado = (bool) session('auth_logged_in'); ?>
     <?php $isAdmin = (bool) session('auth_is_admin'); ?>
     <div class="container">
-        <a class="navbar-brand fw-semibold" href="/">Classroom Exercise</a>
+        <a class="navbar-brand fw-semibold" href="<?=base_url();?>//">Classroom Exercise</a>
         <button
             class="navbar-toggler"
             type="button"
@@ -18,32 +18,32 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Inicio</a>
+                    <a class="nav-link" href="<?=base_url();?>//">Inicio</a>
                 </li>
                 <?php if ($isAdmin) : ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="<?=base_url();?>/#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Admin
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="/admin/avaliations">Gerenciar avaliacoes</a></li>
-                            <li><a class="dropdown-item" href="/admin/usuarios">Usuarios cadastrados</a></li>
+                            <li><a class="dropdown-item" href="<?=base_url();?>//admin/avaliations">Gerenciar avaliacoes</a></li>
+                            <li><a class="dropdown-item" href="<?=base_url();?>//admin/usuarios">Usuarios cadastrados</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="/admin/importar-xml">Importar XML</a></li>
-                            <li><a class="dropdown-item" href="/admin/inport/users">Import Users</a></li>
+                            <li><a class="dropdown-item" href="<?=base_url();?>//admin/importar-xml">Importar XML</a></li>
+                            <li><a class="dropdown-item" href="<?=base_url();?>//admin/inport/users">Import Users</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>
                 <?php if ($logado) : ?>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-1" href="/logout" title="Sair">
+                        <a class="nav-link d-flex align-items-center gap-1" href="<?=base_url();?>//logout" title="Sair">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sair</span>
                         </a>
                     </li>
                 <?php else : ?>
                     <li class="nav-item">
-                        <a class="nav-link d-flex align-items-center gap-1" href="/login" title="Login">
+                        <a class="nav-link d-flex align-items-center gap-1" href="<?=base_url();?>//login" title="Login">
                             <i class="bi bi-person-circle"></i>
                             <span>Login</span>
                         </a>

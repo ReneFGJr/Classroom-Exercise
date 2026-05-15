@@ -55,7 +55,7 @@ class TraceFramePlugin extends AbstractPlugin implements ValuePluginInterface
             $function = $this->renderer->escape($function);
 
             if (null !== ($url = $callable->getPhpDocUrl())) {
-                $function = '<a href="'.$url.'" target=_blank>'.$function.'</a>';
+                $function = '<a href="<?=base_url();?>/'.$url.'" target=_blank>'.$function.'</a>';
             }
 
             $header .= $function;

@@ -6,7 +6,7 @@
     <div class="text-center py-5">
         <h1 class="display-4">Bem-vindo ao Classroom Exercise</h1>
         <p class="lead text-secondary">Acesse as atividades disponíveis para começar a praticar.</p>
-        <a href="/login" class="btn btn-primary btn-lg">Entrar</a>
+        <a href="<?=base_url();?>//login" class="btn btn-primary btn-lg">Entrar</a>
     </div>
 <?php else : ?>
     <div class="py-4">
@@ -42,7 +42,7 @@
             <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
                 <h2 class="h5 mb-0">Avaliacoes</h2>
                 <?php if (session('is_admin')): ?>
-                    <a href="/admin/avaliations" class="btn btn-primary">Gerenciar</a>
+                    <a href="<?=base_url();?>//admin/avaliations" class="btn btn-primary">Gerenciar</a>
                 <?php endif; ?>
             </div>
             <div class="card-body">
@@ -114,7 +114,7 @@
                                         <td><?= esc((string) ($avaliacao['duracao_prova_horas'] ?? '-')) ?></td>
                                         <td><span class="badge text-bg-<?= esc($statusClasse) ?>"><?= esc($statusTexto) ?></span></td>
                                         <td class="text-end">
-                                            <a href="/atividade/<?= $id ?>" class="btn btn-outline-primary btn-sm">Abrir</a>
+                                            <a href="<?=base_url();?>//atividade/<?= $id ?>" class="btn btn-outline-primary btn-sm">Abrir</a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
