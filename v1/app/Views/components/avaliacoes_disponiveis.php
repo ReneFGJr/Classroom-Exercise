@@ -35,10 +35,13 @@
                                 <td><?= esc((string) ($avaliacao['created_at'] ?? '-')) ?></td>
                                 <td>
                                     <div class="d-flex gap-2">
+                                        <a href="<?= site_url('atividade/avaliacao/' . $idAvaliacao) ?>" class="btn btn-warning btn-sm" title="Realizar avaliacao" aria-label="Realizar avaliacao">
+                                            Realizar Avaliacao
+                                        </a>
                                         <a href="<?=base_url();?>/admin/avaliations/<?= $idAvaliacao ?>/edit" class="btn btn-outline-secondary btn-sm" title="Editar avaliacao" aria-label="Editar avaliacao">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
-                                        <form method="post" action="<?= base_url(); ?> ?>/admin/avaliations/<?= $idAvaliacao ?>/delete" onsubmit="return confirm('Deseja excluir esta avaliacao?');">
+                                        <form method="post" action="<?= base_url(); ?>/admin/avaliations/<?= $idAvaliacao ?>/delete" onsubmit="return confirm('Deseja excluir esta avaliacao?');">
                                             <?= csrf_field() ?>
                                             <button type="submit" class="btn btn-outline-danger btn-sm" title="Excluir avaliacao" aria-label="Excluir avaliacao">
                                                 <i class="bi bi-trash3"></i>

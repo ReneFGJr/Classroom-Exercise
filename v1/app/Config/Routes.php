@@ -32,6 +32,9 @@ $routes->get('admin/importar-xml', 'Admin::importarXml');
 $routes->post('admin/importar-xml/confirmar', 'Admin::confirmarImportacaoXml');
 $routes->get('admin/inport/users', 'Admin::inportUsers');
 $routes->get('atividade/(:num)', 'Atividade::show/$1');
+$routes->get('atividade/avaliacao/(:num)', 'Atividade::avaliacao/$1', ['filter' => 'admin']);
+$routes->post('atividade/avaliacao/(:num)/corrigir-automatico', 'Atividade::corrigirAutomaticamente/$1', ['filter' => 'admin']);
+$routes->post('atividade/avaliacao/(:num)/corrigir/(:num)', 'Atividade::salvarCorrecaoManual/$1/$2', ['filter' => 'admin']);
 $routes->post('atividade/(:num)/responder', 'Atividade::responder/$1');
 
 $routes->get('login', 'Auth::login');

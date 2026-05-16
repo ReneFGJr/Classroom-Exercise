@@ -8,6 +8,7 @@
 $disciplina = isset($grupo['nome_disciplina']) ? (string) $grupo['nome_disciplina'] : '-';
 $sucesso = session('sucesso');
 $erro = session('erro');
+$isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
 ?>
 <?= $this->extend('layout/base') ?>
 
@@ -64,7 +65,12 @@ $erro = session('erro');
 
     <div class="card border-0 shadow-sm mt-3">
         <div class="card-body">
-            <h2 class="h5 mb-3">Avaliacao</h2>
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+                <h2 class="h5 mb-0">Avaliacao</h2>
+                <?php if ($isAdmin) : ?>
+                    <a href="<?= site_url('atividade/avaliacao/' . (int) ($grupo['id'] ?? 0)) ?>" class="btn btn-warning btn-sm">Realizar Avaliacao</a>
+                <?php endif; ?>
+            </div>
 
             <?php if (($avaliacao_finalizada ?? false) === true) : ?>
                 <div class="alert alert-info">Avaliacao finalizada e enviada. Edicao bloqueada.</div>
@@ -73,7 +79,7 @@ $erro = session('erro');
             <?php if ($questoes_selecionadas === []) : ?>
                 <p class="mb-0 text-secondary">Nenhuma questao selecionada para esta avaliacao.</p>
             <?php else : ?>
-                <form method="post" action="<?= site_url('atividade/' . (int) ($grupo['id'] ?? 0) . '/responder') ?>">
+                <form id="form-realizar-avaliacao" method="post" action="<?= site_url('atividade/' . (int) ($grupo['id'] ?? 0) . '/responder') ?>">
                     <?= csrf_field() ?>
 
                     <?php foreach ($questoes_selecionadas as $indice => $questao) : ?>

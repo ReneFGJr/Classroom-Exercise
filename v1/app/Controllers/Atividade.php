@@ -76,6 +76,118 @@ class Atividade extends BaseController
         return view('atividade', $dados);
     }
 
+    public function avaliacao(int $id): string|ResponseInterface
+    {
+        $db = db_connect();
+
+        $isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
+        if (! $isAdmin) {
+            return redirect()->to('/')->with('erro', 'Acesso negado. Somente administradores podem acessar a correcao.');
+        }
+
+        if (! $db->tableExists('grupo_avaliacao')) {
+            return redirect()->to('/')->with('erro', 'Tabela grupo_avaliacao nao encontrada.');
+        }
+
+        if (! $db->tableExists('respostas')) {
+            return redirect()->to('/atividade/' . $id)->with('erro', 'Tabela respostas nao encontrada.');
+        }
+
+        $grupo = $db->table('grupo_avaliacao')
+            ->where('id', $id)
+            ->get()
+            ->getRowArray();
+
+        if ($grupo === null) {
+            throw PageNotFoundException::forPageNotFound('Grupo de avaliacao nao encontrado.');
+        }
+
+        $temUsuarios = $db->tableExists('usuarios');
+        $temNomeCompleto = $temUsuarios && $this->campoExiste($db, 'usuarios', 'nome_completo');
+        $temUsuarioLogin = $temUsuarios && $this->campoExiste($db, 'usuarios', 'usuario');
+        $temEmail = $temUsuarios && $this->campoExiste($db, 'usuarios', 'email');
+
+        $nomeUsuarioExpr = "CONCAT('Usuario #', r.usuario_id)";
+
+        if ($temNomeCompleto && $temUsuarioLogin) {
+            $nomeUsuarioExpr = "COALESCE(NULLIF(u.nome_completo, ''), NULLIF(u.usuario, ''), CONCAT('Usuario #', r.usuario_id))";
+        } elseif ($temNomeCompleto) {
+            $nomeUsuarioExpr = "COALESCE(NULLIF(u.nome_completo, ''), CONCAT('Usuario #', r.usuario_id))";
+        } elseif ($temUsuarioLogin) {
+            $nomeUsuarioExpr = "COALESCE(NULLIF(u.usuario, ''), CONCAT('Usuario #', r.usuario_id))";
+        }
+
+        $select = [
+            'r.id AS resposta_id',
+            'r.usuario_id',
+            $nomeUsuarioExpr . ' AS nome_usuario',
+            ($temEmail ? 'u.email' : "''") . ' AS email_usuario',
+            'r.question_id',
+            'q.enunciado_questao',
+            'q.resposta_correta',
+            'r.resposta_texto',
+            'r.created_at',
+            'r.updated_at',
+        ];
+
+        if ($this->campoExiste($db, 'respostas', 'finalizado_em')) {
+            $select[] = 'r.finalizado_em';
+        }
+
+        if ($this->campoExiste($db, 'respostas', 'corrigido')) {
+            $select[] = 'r.corrigido';
+        }
+
+        if ($this->campoExiste($db, 'respostas', 'comentarios_correcao')) {
+            $select[] = 'r.comentarios_correcao';
+        }
+
+        if ($this->campoExiste($db, 'respostas', 'nota')) {
+            $select[] = 'r.nota';
+        }
+
+        $builder = $db->table('respostas r')
+            ->select(implode(', ', $select), false)
+            ->join('questions q', 'q.id = r.question_id', 'left')
+            ->where('r.grupo_avaliacao_id', $id)
+            ->orderBy('nome_usuario', 'ASC')
+            ->orderBy('r.usuario_id', 'ASC')
+            ->orderBy('r.id', 'ASC');
+
+        if ($temUsuarios) {
+            $builder->join('usuarios u', 'u.id = r.usuario_id', 'left');
+        }
+
+        $respostas = $builder
+            ->get()
+            ->getResultArray();
+
+        $respostasPorAluno = [];
+
+        foreach ($respostas as $resposta) {
+            $usuarioId = (int) ($resposta['usuario_id'] ?? 0);
+
+            if (! isset($respostasPorAluno[$usuarioId])) {
+                $respostasPorAluno[$usuarioId] = [
+                    'usuario_id' => $usuarioId,
+                    'nome_usuario' => (string) ($resposta['nome_usuario'] ?? ('Usuario #' . $usuarioId)),
+                    'email_usuario' => (string) ($resposta['email_usuario'] ?? ''),
+                    'respostas' => [],
+                ];
+            }
+
+            $respostasPorAluno[$usuarioId]['respostas'][] = $resposta;
+        }
+
+        $dados = [
+            'title' => 'Avaliacao - Correcao',
+            'grupo' => $grupo,
+            'respostas_por_aluno' => array_values($respostasPorAluno),
+        ];
+
+        return view('atividade_avaliacao', $dados);
+    }
+
     public function responder(int $id): ResponseInterface
     {
         $db = db_connect();
@@ -158,6 +270,192 @@ class Atividade extends BaseController
         }
 
         return redirect()->to('/atividade/' . $id)->with('sucesso', 'Respostas salvas com sucesso.');
+    }
+
+    public function salvarCorrecaoManual(int $id, int $respostaId): ResponseInterface
+    {
+        $db = db_connect();
+
+        $isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
+        if (! $isAdmin) {
+            return redirect()->to('/')->with('erro', 'Acesso negado.');
+        }
+
+        if (! $db->tableExists('respostas')) {
+            return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Tabela respostas nao encontrada.');
+        }
+
+        foreach (['corrigido', 'nota', 'comentarios_correcao'] as $campo) {
+            if (! $this->campoExiste($db, 'respostas', $campo)) {
+                return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Campos de correcao nao encontrados. Execute as migrations pendentes.');
+            }
+        }
+
+        $registro = $db->table('respostas')
+            ->select('id')
+            ->where('id', $respostaId)
+            ->where('grupo_avaliacao_id', $id)
+            ->limit(1)
+            ->get()
+            ->getRowArray();
+
+        if ($registro === null) {
+            return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Resposta nao encontrada.');
+        }
+
+        $notaRaw = $this->request->getPost('nota');
+        $nota = $notaRaw !== null && $notaRaw !== '' ? (int) $notaRaw : null;
+        $corrigido = $this->request->getPost('corrigido') === '1' ? 1 : 0;
+        $comentarios = trim((string) ($this->request->getPost('comentarios_correcao') ?? ''));
+
+        $db->table('respostas')
+            ->where('id', $respostaId)
+            ->where('grupo_avaliacao_id', $id)
+            ->update([
+                'corrigido' => $corrigido,
+                'nota' => $nota,
+                'comentarios_correcao' => $comentarios !== '' ? $comentarios : null,
+                'updated_at' => date('Y-m-d H:i:s'),
+            ]);
+
+        return redirect()->to('/atividade/avaliacao/' . $id)->with('sucesso', 'Correcao salva com sucesso.');
+    }
+
+    public function corrigirAutomaticamente(int $id): ResponseInterface
+    {
+        $db = db_connect();
+
+        $isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
+        if (! $isAdmin) {
+            return redirect()->to('/')->with('erro', 'Acesso negado. Somente administradores podem corrigir automaticamente.');
+        }
+
+        if (! $db->tableExists('respostas') || ! $db->tableExists('questions')) {
+            return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Tabelas obrigatorias para correcao automatica nao encontradas.');
+        }
+
+        foreach (['corrigido', 'comentarios_correcao', 'nota'] as $campoCorrecao) {
+            if (! $this->campoExiste($db, 'respostas', $campoCorrecao)) {
+                return redirect()->to('/atividade/avaliacao/' . $id)
+                    ->with('erro', 'Campos de correcao nao encontrados na tabela respostas. Execute as migrations pendentes.');
+            }
+        }
+
+        if (! $this->campoExiste($db, 'questions', 'resposta_correta')) {
+            return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Campo resposta_correta nao encontrado em questions.');
+        }
+
+        $temTiposResposta = $db->tableExists('tipos_resposta') && $this->campoExiste($db, 'questions', 'tipo_resposta_id')
+            && $this->campoExiste($db, 'tipos_resposta', 'id') && $this->campoExiste($db, 'tipos_resposta', 'slug');
+
+        $select = [
+            'r.id AS resposta_id',
+            'r.resposta_texto',
+            'q.resposta_correta',
+            'q.resposta_1',
+            'q.resposta_2',
+            'q.resposta_3',
+            'q.resposta_4',
+            'q.resposta_5',
+        ];
+
+        if ($temTiposResposta) {
+            $select[] = 'tr.slug AS tipo_slug';
+        }
+
+        $builder = $db->table('respostas r')
+            ->select(implode(', ', $select))
+            ->join('questions q', 'q.id = r.question_id', 'inner')
+            ->where('r.grupo_avaliacao_id', $id)
+            ->orderBy('r.id', 'ASC');
+
+        if ($temTiposResposta) {
+            $builder->join('tipos_resposta tr', 'tr.id = q.tipo_resposta_id', 'left');
+        }
+
+        $registros = $builder->get()->getResultArray();
+
+        if ($registros === []) {
+            return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Nao ha respostas para corrigir.');
+        }
+
+        $agora = date('Y-m-d H:i:s');
+        $totalCorrigidas = 0;
+        $totalAcertos = 0;
+
+        $db->transStart();
+
+        foreach ($registros as $registro) {
+            $tipoSlug = strtolower(trim((string) ($registro['tipo_slug'] ?? '')));
+            $correta = trim((string) ($registro['resposta_correta'] ?? ''));
+            $resposta = trim((string) ($registro['resposta_texto'] ?? ''));
+
+            $opcoes = [];
+            foreach (['resposta_1', 'resposta_2', 'resposta_3', 'resposta_4', 'resposta_5'] as $campoOpcao) {
+                $textoOpcao = trim((string) ($registro[$campoOpcao] ?? ''));
+                if ($textoOpcao !== '') {
+                    $opcoes[] = $textoOpcao;
+                }
+            }
+
+            $ehMultiplaEscolha = false;
+
+            if ($temTiposResposta && $tipoSlug !== '') {
+                // tipo identificado pelo banco
+                $ehMultiplaEscolha = in_array($tipoSlug, ['multipla_escolha', 'multipla_resposta', 'verdadeiro_falso'], true);
+            } else {
+                // fallback: questao com opcoes de resposta preenchidas e gabarito definido
+                $ehMultiplaEscolha = count($opcoes) >= 2;
+            }
+
+            if (! $ehMultiplaEscolha || $correta === '') {
+                continue;
+            }
+
+            $respostaNormalizada = mb_strtolower($resposta);
+            $corretaNormalizada = mb_strtolower($correta);
+            $acertou = $respostaNormalizada !== '' && $respostaNormalizada === $corretaNormalizada;
+
+            if ($acertou) {
+                $totalAcertos++;
+            }
+
+            $comentario = 'Correcao automatica: resposta incorreta.';
+            if ($acertou) {
+                $comentario = 'Correcao automatica: resposta correta.';
+            } elseif ($resposta === '') {
+                $comentario = 'Correcao automatica: questao sem resposta.';
+            }
+
+            if (! $acertou) {
+                $comentario .= ' Correta: ' . $correta;
+            }
+
+            $db->table('respostas')
+                ->where('id', (int) ($registro['resposta_id'] ?? 0))
+                ->update([
+                    'corrigido' => 1,
+                    'nota' => $acertou ? 1 : 0,
+                    'comentarios_correcao' => $comentario,
+                    'updated_at' => $agora,
+                ]);
+
+            $totalCorrigidas++;
+        }
+
+        $db->transComplete();
+
+        if (! $db->transStatus()) {
+            return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Falha ao salvar a correcao automatica.');
+        }
+
+        if ($totalCorrigidas === 0) {
+            return redirect()->to('/atividade/avaliacao/' . $id)
+                ->with('erro', 'Nenhuma questao objetiva identificada para correcao automatica.');
+        }
+
+        return redirect()->to('/atividade/avaliacao/' . $id)
+            ->with('sucesso', 'Correcao automatica concluida. Questoes corrigidas: ' . $totalCorrigidas . '. Acertos: ' . $totalAcertos . '.');
     }
 
     private function avaliacaoFinalizada(object $db, int $grupoAvaliacaoId, int $usuarioId): bool
