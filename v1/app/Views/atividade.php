@@ -86,6 +86,17 @@ $isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
                         <?php
                         $respostaId = (int) ($questao['resposta_id'] ?? 0);
                         $respostaAtual = (string) ($questao['resposta_texto'] ?? '');
+                        $foiCorrigido = array_key_exists('corrigido', $questao) && (int) ($questao['corrigido'] ?? 0) === 1;
+                        $notaQuestao = array_key_exists('nota', $questao) && $questao['nota'] !== null
+                            ? (int) $questao['nota'] : null;
+                        $classePainelQuestao = 'border rounded p-3 mb-3';
+
+                        if ($foiCorrigido) {
+                            $classePainelQuestao .= $notaQuestao === 1
+                                ? ' bg-success-subtle border-success-subtle'
+                                : ' bg-danger-subtle border-danger-subtle';
+                        }
+
                         $opcoes = [];
 
                         foreach (['resposta_1', 'resposta_2', 'resposta_3', 'resposta_4', 'resposta_5'] as $campoOpcao) {
@@ -96,7 +107,7 @@ $isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
                         }
                         ?>
 
-                        <div class="border rounded p-3 mb-3">
+                        <div class="<?= esc($classePainelQuestao) ?>">
                             <p class="fw-semibold mb-2">
                                 <?= esc((string) ($indice + 1)) ?>.
                                 <?= esc((string) ($questao['enunciado_questao'] ?? 'Questao sem enunciado.')) ?>

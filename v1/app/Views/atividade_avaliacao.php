@@ -59,11 +59,16 @@ $erro = session('erro');
                             $textoResposta  = trim((string) ($resposta['resposta_texto'] ?? ''));
                             $gabarito       = trim((string) ($resposta['resposta_correta'] ?? ''));
                             $foiCorrigido   = array_key_exists('corrigido', $resposta) && (int) ($resposta['corrigido'] ?? 0) === 1;
-                            $corrigido      = $foiCorrigido ? 'Sim' : 'Nao';
+                            $avaliada       = $foiCorrigido ? 'Sim' : 'Nao';
                             $notaVal        = array_key_exists('nota', $resposta) && $resposta['nota'] !== null
                                                 ? (int) $resposta['nota'] : null;
                             $nota           = $notaVal !== null ? (string) $notaVal : '-';
                             $comentarios    = trim((string) ($resposta['comentarios_correcao'] ?? ''));
+                            $tipoQuestao    = trim((string) ($resposta['tipo_questao'] ?? ''));
+                            $tipoQuestaoNorm = mb_strtolower($tipoQuestao);
+                            $ehDissertativa = str_contains($tipoQuestaoNorm, 'dissert')
+                                || str_contains($tipoQuestaoNorm, 'aberta')
+                                || str_contains($tipoQuestaoNorm, 'texto');
                             $offcanvasId    = 'offcanvas-correcao-' . $respostaIdAtual;
 
                             if (! $foiCorrigido) {
@@ -82,11 +87,28 @@ $erro = session('erro');
                                     <div class="fw-semibold">
                                         Questao <?= esc((string) ($indice + 1)) ?>
                                         <span class="text-secondary fw-normal small">(ID <?= esc((string) $respostaIdAtual) ?>)</span>
+                                        <?php if ($tipoQuestao !== '') : ?>
+                                            <span class="badge text-bg-light border ms-1">Tipo: <?= esc($tipoQuestao) ?></span>
+                                        <?php endif; ?>
                                     </div>
                                     <div class="d-flex gap-2 align-items-center">
                                         <span class="badge <?= $foiCorrigido ? 'text-bg-success' : 'text-bg-secondary' ?>">
-                                            Corrigido: <?= esc($corrigido) ?>
+                                            Avaliada: <?= esc($avaliada) ?>
                                         </span>
+                                        <?php if (! $foiCorrigido && $ehDissertativa) : ?>
+                                            <form method="post" action="<?= site_url('atividade/avaliacao/' . (int) ($grupo['id'] ?? 0) . '/corrigir/' . $respostaIdAtual) ?>" class="mb-0">
+                                                <?= csrf_field() ?>
+                                                <input type="hidden" name="correta" value="1">
+                                                <button
+                                                    type="submit"
+                                                    class="btn btn-sm btn-outline-success"
+                                                    title="Marcar como correta (nota 1)"
+                                                    onclick="return confirm('Marcar esta questao como correta e atribuir nota 1?')"
+                                                >
+                                                    <i class="bi bi-hand-thumbs-up"></i> Joinha
+                                                </button>
+                                            </form>
+                                        <?php endif; ?>
                                         <button
                                             type="button"
                                             class="badge <?= $badgeNota ?> border-0 text-decoration-none"
@@ -144,30 +166,18 @@ $erro = session('erro');
                                         <?= csrf_field() ?>
 
                                         <div class="mb-3">
-                                            <label class="form-label fw-semibold">Esta correto?</label>
+                                            <label class="form-label fw-semibold">Resultado da correcao</label>
                                             <div class="d-flex gap-3">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="corrigido" id="<?= esc($offcanvasId) ?>_corrigido_sim" value="1" <?= $foiCorrigido ? 'checked' : '' ?>>
-                                                    <label class="form-check-label" for="<?= esc($offcanvasId) ?>_corrigido_sim">Sim (corrigido)</label>
+                                                    <input class="form-check-input" type="radio" name="correta" id="<?= esc($offcanvasId) ?>_correta_sim" value="1" <?= $notaVal === 1 ? 'checked' : '' ?>>
+                                                    <label class="form-check-label" for="<?= esc($offcanvasId) ?>_correta_sim">Correta (nota 1)</label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="corrigido" id="<?= esc($offcanvasId) ?>_corrigido_nao" value="0" <?= ! $foiCorrigido ? 'checked' : '' ?>>
-                                                    <label class="form-check-label" for="<?= esc($offcanvasId) ?>_corrigido_nao">Nao (pendente)</label>
+                                                    <input class="form-check-input" type="radio" name="correta" id="<?= esc($offcanvasId) ?>_correta_nao" value="0" <?= $notaVal !== 1 ? 'checked' : '' ?>>
+                                                    <label class="form-check-label" for="<?= esc($offcanvasId) ?>_correta_nao">Errada (nota 0)</label>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="<?= esc($offcanvasId) ?>_nota" class="form-label fw-semibold">Nota</label>
-                                            <input
-                                                type="number"
-                                                class="form-control"
-                                                id="<?= esc($offcanvasId) ?>_nota"
-                                                name="nota"
-                                                value="<?= esc($notaVal !== null ? (string) $notaVal : '') ?>"
-                                                min="0"
-                                                placeholder="Ex: 10"
-                                            >
+                                            <div class="form-text">A nota sera atribuida automaticamente: 1 para correta e 0 para errada.</div>
                                         </div>
 
                                         <div class="mb-4">

@@ -106,6 +106,20 @@ class Atividade extends BaseController
         $temNomeCompleto = $temUsuarios && $this->campoExiste($db, 'usuarios', 'nome_completo');
         $temUsuarioLogin = $temUsuarios && $this->campoExiste($db, 'usuarios', 'usuario');
         $temEmail = $temUsuarios && $this->campoExiste($db, 'usuarios', 'email');
+        $temTiposResposta = $db->tableExists('tipos_resposta')
+            && $this->campoExiste($db, 'questions', 'tipo_resposta_id')
+            && $this->campoExiste($db, 'tipos_resposta', 'id');
+
+        $campoTipoQuestao = null;
+        if ($temTiposResposta) {
+            if ($this->campoExiste($db, 'tipos_resposta', 'nome')) {
+                $campoTipoQuestao = 'nome';
+            } elseif ($this->campoExiste($db, 'tipos_resposta', 'descricao')) {
+                $campoTipoQuestao = 'descricao';
+            } elseif ($this->campoExiste($db, 'tipos_resposta', 'slug')) {
+                $campoTipoQuestao = 'slug';
+            }
+        }
 
         $nomeUsuarioExpr = "CONCAT('Usuario #', r.usuario_id)";
 
@@ -146,6 +160,10 @@ class Atividade extends BaseController
             $select[] = 'r.nota';
         }
 
+        if ($campoTipoQuestao !== null) {
+            $select[] = 'tr.' . $campoTipoQuestao . ' AS tipo_questao';
+        }
+
         $builder = $db->table('respostas r')
             ->select(implode(', ', $select), false)
             ->join('questions q', 'q.id = r.question_id', 'left')
@@ -156,6 +174,10 @@ class Atividade extends BaseController
 
         if ($temUsuarios) {
             $builder->join('usuarios u', 'u.id = r.usuario_id', 'left');
+        }
+
+        if ($campoTipoQuestao !== null) {
+            $builder->join('tipos_resposta tr', 'tr.id = q.tipo_resposta_id', 'left');
         }
 
         $respostas = $builder
@@ -303,9 +325,14 @@ class Atividade extends BaseController
             return redirect()->to('/atividade/avaliacao/' . $id)->with('erro', 'Resposta nao encontrada.');
         }
 
-        $notaRaw = $this->request->getPost('nota');
-        $nota = $notaRaw !== null && $notaRaw !== '' ? (int) $notaRaw : null;
-        $corrigido = $this->request->getPost('corrigido') === '1' ? 1 : 0;
+        $correta = $this->request->getPost('correta');
+        if ($correta !== '0' && $correta !== '1') {
+            // Compatibilidade com formulario antigo (name="corrigido")
+            $correta = $this->request->getPost('corrigido') === '1' ? '1' : '0';
+        }
+
+        $nota = $correta === '1' ? 1 : 0;
+        $corrigido = 1;
         $comentarios = trim((string) ($this->request->getPost('comentarios_correcao') ?? ''));
 
         $db->table('respostas')
@@ -324,6 +351,38 @@ class Atividade extends BaseController
     public function corrigirAutomaticamente(int $id): ResponseInterface
     {
         $db = db_connect();
+
+        $normalizarTexto = static function (string $texto): string {
+            $normalizado = mb_strtolower(trim($texto));
+            $normalizado = preg_replace('/\s+/u', ' ', $normalizado) ?? $normalizado;
+
+            return $normalizado;
+        };
+
+        $valorBooleano = static function (string $texto) use ($normalizarTexto): ?bool {
+            $valor = $normalizarTexto($texto);
+            if ($valor === '') {
+                return null;
+            }
+
+            if (in_array($valor, ['v', 'verdadeiro', 'true', '1'], true)) {
+                return true;
+            }
+
+            if (in_array($valor, ['f', 'falso', 'false', '0'], true)) {
+                return false;
+            }
+
+            if (preg_match('/\b(nao|n\x{00e3}o|falso|falsa|incorreto|incorreta|errado|errada)\b/u', $valor) === 1) {
+                return false;
+            }
+
+            if (preg_match('/\b(sim|verdadeiro|verdadeira|correto|correta)\b/u', $valor) === 1) {
+                return true;
+            }
+
+            return null;
+        };
 
         $isAdmin = (bool) (session('auth_is_admin') ?? session('is_admin') ?? false);
         if (! $isAdmin) {
@@ -390,6 +449,14 @@ class Atividade extends BaseController
             $correta = trim((string) ($registro['resposta_correta'] ?? ''));
             $resposta = trim((string) ($registro['resposta_texto'] ?? ''));
 
+            $mapaAlternativas = [
+                'a' => trim((string) ($registro['resposta_1'] ?? '')),
+                'b' => trim((string) ($registro['resposta_2'] ?? '')),
+                'c' => trim((string) ($registro['resposta_3'] ?? '')),
+                'd' => trim((string) ($registro['resposta_4'] ?? '')),
+                'e' => trim((string) ($registro['resposta_5'] ?? '')),
+            ];
+
             $opcoes = [];
             foreach (['resposta_1', 'resposta_2', 'resposta_3', 'resposta_4', 'resposta_5'] as $campoOpcao) {
                 $textoOpcao = trim((string) ($registro[$campoOpcao] ?? ''));
@@ -408,27 +475,56 @@ class Atividade extends BaseController
                 $ehMultiplaEscolha = count($opcoes) >= 2;
             }
 
-            if (! $ehMultiplaEscolha || $correta === '') {
+            $temGabarito = $correta !== '';
+
+            if (! $temGabarito) {
                 continue;
             }
 
-            $respostaNormalizada = mb_strtolower($resposta);
-            $corretaNormalizada = mb_strtolower($correta);
-            $acertou = $respostaNormalizada !== '' && $respostaNormalizada === $corretaNormalizada;
+            $respostaNormalizada = $normalizarTexto($resposta);
+            $corretaNormalizada = $normalizarTexto($correta);
+            $corretaPorAlternativa = '';
+            if (preg_match('/^[a-e]$/i', $correta) === 1) {
+                $alternativa = mb_strtolower($correta);
+                $corretaPorAlternativa = $mapaAlternativas[$alternativa] ?? '';
+            }
+
+            $corretaAlternativaNormalizada = $normalizarTexto($corretaPorAlternativa);
+
+            $gabaritoBooleano = $valorBooleano($correta);
+            $respostaBooleano = $valorBooleano($resposta);
+            $ehVerdadeiroFalso = $tipoSlug === 'verdadeiro_falso' || $gabaritoBooleano !== null;
+
+            $acertou = $respostaNormalizada !== ''
+                && (
+                    $respostaNormalizada === $corretaNormalizada
+                    || ($corretaAlternativaNormalizada !== '' && $respostaNormalizada === $corretaAlternativaNormalizada)
+                    || ($ehVerdadeiroFalso && $gabaritoBooleano !== null && $respostaBooleano !== null && $respostaBooleano === $gabaritoBooleano)
+                );
 
             if ($acertou) {
                 $totalAcertos++;
             }
 
-            $comentario = 'Correcao automatica: resposta incorreta.';
+            $comentario = $ehMultiplaEscolha
+                ? 'Correcao automatica (objetiva): resposta incorreta.'
+                : 'Correcao automatica (gabarito textual): resposta incorreta.';
             if ($acertou) {
-                $comentario = 'Correcao automatica: resposta correta.';
+                $comentario = $ehMultiplaEscolha
+                    ? 'Correcao automatica (objetiva): resposta correta.'
+                    : 'Correcao automatica (gabarito textual): resposta correta.';
             } elseif ($resposta === '') {
-                $comentario = 'Correcao automatica: questao sem resposta.';
+                $comentario = $ehMultiplaEscolha
+                    ? 'Correcao automatica (objetiva): questao sem resposta.'
+                    : 'Correcao automatica (gabarito textual): questao sem resposta.';
             }
 
             if (! $acertou) {
-                $comentario .= ' Correta: ' . $correta;
+                if ($corretaPorAlternativa !== '') {
+                    $comentario .= ' Correta: ' . $correta . ' (' . $corretaPorAlternativa . ')';
+                } else {
+                    $comentario .= ' Correta: ' . $correta;
+                }
             }
 
             $db->table('respostas')
@@ -451,7 +547,7 @@ class Atividade extends BaseController
 
         if ($totalCorrigidas === 0) {
             return redirect()->to('/atividade/avaliacao/' . $id)
-                ->with('erro', 'Nenhuma questao objetiva identificada para correcao automatica.');
+            ->with('erro', 'Nenhuma questao com gabarito identificada para correcao automatica.');
         }
 
         return redirect()->to('/atividade/avaliacao/' . $id)
@@ -586,8 +682,28 @@ class Atividade extends BaseController
             return [];
         }
 
+        $selectCampos = [
+            'r.id AS resposta_id',
+            'r.resposta_texto',
+            'q.id AS question_id',
+            'q.enunciado_questao',
+            'q.resposta_1',
+            'q.resposta_2',
+            'q.resposta_3',
+            'q.resposta_4',
+            'q.resposta_5',
+        ];
+
+        if ($this->campoExiste($db, 'respostas', 'corrigido')) {
+            $selectCampos[] = 'r.corrigido';
+        }
+
+        if ($this->campoExiste($db, 'respostas', 'nota')) {
+            $selectCampos[] = 'r.nota';
+        }
+
         return $db->table('respostas r')
-            ->select('r.id AS resposta_id, r.resposta_texto, q.id AS question_id, q.enunciado_questao, q.resposta_1, q.resposta_2, q.resposta_3, q.resposta_4, q.resposta_5')
+            ->select(implode(', ', $selectCampos))
             ->join('questions q', 'q.id = r.question_id', 'inner')
             ->where('r.grupo_avaliacao_id', $grupoAvaliacaoId)
             ->where('r.usuario_id', $usuarioId)

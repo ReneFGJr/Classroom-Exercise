@@ -71,6 +71,53 @@ class Admin extends BaseController
         ]);
     }
 
+    public function logarComoUsuario(int $id): ResponseInterface
+    {
+        $db = db_connect();
+
+        $usuario = $db->table('usuarios')->where('id', $id)->get()->getRowArray();
+
+        if ($usuario === null) {
+            return redirect()->to('/admin/usuarios')->with('erro', 'Usuario nao encontrado.');
+        }
+
+        $sessao = session();
+
+        // Guarda o admin original para poder voltar
+        $sessao->set([
+            'impersonando'              => true,
+            'impersonando_admin_id'     => $sessao->get('auth_user_id'),
+            'impersonando_admin_nome'   => $sessao->get('auth_nome'),
+            'auth_logged_in'            => true,
+            'auth_user_id'              => (int) ($usuario['id'] ?? 0),
+            'auth_nome'                 => (string) ($usuario['nome_completo'] ?? $usuario['usuario'] ?? 'Usuario'),
+            'auth_is_admin'             => (int) ($usuario['is_admin'] ?? 0) === 1,
+        ]);
+
+        return redirect()->to('/')->with('sucesso', 'Voce esta logado como ' . esc($usuario['nome_completo'] ?? $usuario['usuario']));
+    }
+
+    public function voltarParaAdmin(): ResponseInterface
+    {
+        $sessao = session();
+
+        if (! $sessao->get('impersonando')) {
+            return redirect()->to('/');
+        }
+
+        $sessao->set([
+            'impersonando'  => false,
+            'auth_logged_in'=> true,
+            'auth_user_id'  => $sessao->get('impersonando_admin_id'),
+            'auth_nome'     => $sessao->get('impersonando_admin_nome'),
+            'auth_is_admin' => true,
+        ]);
+
+        $sessao->remove(['impersonando_admin_id', 'impersonando_admin_nome']);
+
+        return redirect()->to('/admin/usuarios')->with('sucesso', 'Voce voltou para sua conta de administrador.');
+    }
+
     public function usuariosCadastrados(): string|ResponseInterface
     {
         $db = db_connect();

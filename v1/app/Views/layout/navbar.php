@@ -26,11 +26,13 @@
                             Admin
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Avaliacoes</h6></li>
                             <li><a class="dropdown-item" href="<?=base_url();?>/admin/avaliations">Gerenciar avaliacoes</a></li>
-                            <li><a class="dropdown-item" href="<?=base_url();?>/admin/usuarios">Usuarios cadastrados</a></li>
-                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="<?=base_url();?>/admin/importar-xml">Importar XML</a></li>
-                            <li><a class="dropdown-item" href="<?=base_url();?>/admin/inport/users">Import Users</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Gestao de Usuarios</h6></li>
+                            <li><a class="dropdown-item" href="<?=base_url();?>/admin/usuarios">Usuarios cadastrados</a></li>
+                            <li><a class="dropdown-item" href="<?=base_url();?>/admin/inport/users">Importar usuarios (CSV)</a></li>
                         </ul>
                     </li>
                 <?php endif; ?>

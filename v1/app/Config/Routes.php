@@ -11,6 +11,8 @@ $routes->group('admin', ['filter' => 'admin'], function ($routes) {
     $routes->get('/', 'Admin::index');
     $routes->get('avaliations', 'Admin::index');
     $routes->get('usuarios', 'Admin::usuariosCadastrados');
+    $routes->post('usuarios/(:num)/logar-como', 'Admin::logarComoUsuario/$1');
+    $routes->post('voltar-para-admin', 'Admin::voltarParaAdmin');
     $routes->get('avaliations/new', 'Admin::novaAvaliacao');
     $routes->post('avaliations/store', 'Admin::storeAvaliacao');
     $routes->get('avaliations/(:num)/edit', 'Admin::editarAvaliacao/$1');
