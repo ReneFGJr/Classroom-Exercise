@@ -335,15 +335,26 @@ class Atividade extends BaseController
         $corrigido = 1;
         $comentarios = trim((string) ($this->request->getPost('comentarios_correcao') ?? ''));
 
+        $dadosUpdate = [
+            'corrigido' => $corrigido,
+            'nota' => $nota,
+            'comentarios_correcao' => $comentarios !== '' ? $comentarios : null,
+            'updated_at' => date('Y-m-d H:i:s'),
+        ];
+
+        if ($this->campoExiste($db, 'respostas', 'validacao_manual') && $this->request->getPost('validacao_manual') === '1') {
+            $dadosUpdate['validacao_manual'] = 1;
+        }
+
         $db->table('respostas')
             ->where('id', $respostaId)
             ->where('grupo_avaliacao_id', $id)
-            ->update([
-                'corrigido' => $corrigido,
-                'nota' => $nota,
-                'comentarios_correcao' => $comentarios !== '' ? $comentarios : null,
-                'updated_at' => date('Y-m-d H:i:s'),
-            ]);
+            ->update($dadosUpdate);
+
+        $ancora = trim((string) ($this->request->getPost('ancora') ?? ''));
+        if ($ancora !== '' && preg_match('/^[a-zA-Z0-9_-]+$/', $ancora) === 1) {
+            return redirect()->to('/atividade/avaliacao/' . $id . '#' . $ancora)->with('sucesso', 'Correcao salva com sucesso.');
+        }
 
         return redirect()->to('/atividade/avaliacao/' . $id)->with('sucesso', 'Correcao salva com sucesso.');
     }
@@ -427,6 +438,10 @@ class Atividade extends BaseController
             ->join('questions q', 'q.id = r.question_id', 'inner')
             ->where('r.grupo_avaliacao_id', $id)
             ->orderBy('r.id', 'ASC');
+
+        if ($this->campoExiste($db, 'respostas', 'validacao_manual')) {
+            $builder->where('(r.validacao_manual IS NULL OR r.validacao_manual = 0)', null, false);
+        }
 
         if ($temTiposResposta) {
             $builder->join('tipos_resposta tr', 'tr.id = q.tipo_resposta_id', 'left');

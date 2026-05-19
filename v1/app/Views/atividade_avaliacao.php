@@ -69,7 +69,10 @@ $erro = session('erro');
                             $ehDissertativa = str_contains($tipoQuestaoNorm, 'dissert')
                                 || str_contains($tipoQuestaoNorm, 'aberta')
                                 || str_contains($tipoQuestaoNorm, 'texto');
+                            $podeUsarJoinha = (! $foiCorrigido && $ehDissertativa)
+                                || ($foiCorrigido && $notaVal === 0);
                             $offcanvasId    = 'offcanvas-correcao-' . $respostaIdAtual;
+                            $ancoraQuestao  = 'questao-' . $respostaIdAtual;
 
                             if (! $foiCorrigido) {
                                 $panelClass = 'border rounded p-3 bg-secondary-subtle border-secondary-subtle';
@@ -82,7 +85,7 @@ $erro = session('erro');
                                 $badgeNota  = 'text-bg-danger';
                             }
                             ?>
-                            <div class="<?= $panelClass ?>">
+                            <div id="<?= esc($ancoraQuestao) ?>" class="<?= $panelClass ?>">
                                 <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-2">
                                     <div class="fw-semibold">
                                         Questao <?= esc((string) ($indice + 1)) ?>
@@ -95,10 +98,12 @@ $erro = session('erro');
                                         <span class="badge <?= $foiCorrigido ? 'text-bg-success' : 'text-bg-secondary' ?>">
                                             Avaliada: <?= esc($avaliada) ?>
                                         </span>
-                                        <?php if (! $foiCorrigido && $ehDissertativa) : ?>
+                                        <?php if ($podeUsarJoinha) : ?>
                                             <form method="post" action="<?= site_url('atividade/avaliacao/' . (int) ($grupo['id'] ?? 0) . '/corrigir/' . $respostaIdAtual) ?>" class="mb-0">
                                                 <?= csrf_field() ?>
                                                 <input type="hidden" name="correta" value="1">
+                                                <input type="hidden" name="validacao_manual" value="1">
+                                                <input type="hidden" name="ancora" value="<?= esc($ancoraQuestao) ?>">
                                                 <button
                                                     type="submit"
                                                     class="btn btn-sm btn-outline-success"
